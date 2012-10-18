@@ -34,6 +34,9 @@ class DropboxController extends Controller
      	spl_autoload_unregister(array('YiiBase','autoload'));
 		$dropbox = Yii::getPathOfAlias('ext.dropbox');     
 		include ( $dropbox.DIRECTORY_SEPARATOR.'autoload.php');
+                $oAuth = Yii::getPathOfAlias('ext.dropbox.OAuth');     
+                include ($oAuth.DIRECTORY_SEPARATOR.'PHP.php');
+                //Yii::import('ext.dropbox.OAuth/',true);   
        $consumerKey = 'itvelkigj22p5rw';
        $consumerSecret = 'q75ilu33vozx423';
        try {
