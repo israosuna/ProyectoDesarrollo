@@ -1,6 +1,6 @@
 <?php
 
-class SiteController extends Controller
+class DropboxController extends Controller
 {
 	/**
 	 * Declares class-based actions.
@@ -43,6 +43,7 @@ class SiteController extends Controller
 		   print_r($info);
        } catch (Exception $e) {
            $error = "error: " . $e->getMessage();
+           print_r($error); 
        }
 
        spl_autoload_register(array('YiiBase','autoload'));
