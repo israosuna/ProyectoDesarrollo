@@ -170,3 +170,43 @@ Stack trace:
 REQUEST_URI=/proyectoDesarrollo/index.php/dropbox/Authorize_step2?uid=21927996&oauth_token=oor48l5jppfxbcy
 in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php (84)
 in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php (13)
+2012/10/19 13:22:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Authorize".' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('Authorize')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/Authorize
+---
+2012/10/19 13:39:51 [error] [exception.Dropbox_Exception_NotFound] exception 'Dropbox_Exception_NotFound' with message 'Resource at uri: https://api-content.dropbox.com/1/thumbnails/dropbox/Amigos could not be found. No thumbnail available for the file type 'Amigos'
+' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/extensions/dropbox/OAuth/Curl.php:128
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/extensions/dropbox/API.php(267): Dropbox_OAuth_Curl->fetch('https://api-con...', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php(41): Dropbox_API->getThumbnail('/Amigos')
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/actions/CInlineAction.php(50): DropboxController->actionIndex()
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(283): CController->run('')
+#7 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('dropbox')
+#8 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/19 13:42:21 [error] [exception.Dropbox_Exception_NotFound] exception 'Dropbox_Exception_NotFound' with message 'Resource at uri: https://api-content.dropbox.com/1/thumbnails/dropbox/Angelica-Diego could not be found. No thumbnail available for the file type 'Angelica-Diego'
+' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/extensions/dropbox/OAuth/Curl.php:128
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/extensions/dropbox/API.php(267): Dropbox_OAuth_Curl->fetch('https://api-con...', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php(41): Dropbox_API->getThumbnail('/Angelica-Diego')
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/actions/CInlineAction.php(50): DropboxController->actionIndex()
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(283): CController->run('')
+#7 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('dropbox')
+#8 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/dropbox
+---

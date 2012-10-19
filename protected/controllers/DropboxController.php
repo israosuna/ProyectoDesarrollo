@@ -17,14 +17,13 @@ class DropboxController extends Controller {
             $oauth->setToken($tokens);
 
             $dropbox = new Dropbox_API($oauth);
-
             $account = $dropbox->getAccountInfo();
 
             $info = $dropbox->getMetaData('/');
         } catch (Exception $e) {
             $error = "error: " . $e->getMessage();
             //echo $error;
-            $this->redirect('Authorize');
+            $this->redirect('dropbox/Authorize');
         }
 
         spl_autoload_register(array('YiiBase', 'autoload'));
@@ -37,7 +36,11 @@ class DropboxController extends Controller {
         echo " <br/>";
 
         echo "......LIST..... <br/>";
+
         foreach ($info['contents'] as $file) {
+            //$thumbnail= $dropbox->getThumbnail($file['path']);
+           
+            //echo "<img src='$thumbnail'>";
             echo " - ARCHIVO: " . $file['path'];
             echo " - ES CARPETA: " . (($file['is_dir']) ? 'SI' : 'NO');
             echo " - TAMAÑO: " . $file['size'];
