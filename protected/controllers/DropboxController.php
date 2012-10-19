@@ -1,131 +1,84 @@
 <?php
 
+DEFINE('consumerKey','itvelkigj22p5rw');
+DEFINE('consumerSecret', 'q75ilu33vozx423');
+
 class DropboxController extends Controller
 {
-	/**
-	 * Declares class-based actions.
-	 */
-	public function actions()
-	{
-		return array(
-			// captcha action renders the CAPTCHA image displayed on the contact page
-			'captcha'=>array(
-				'class'=>'CCaptchaAction',
-				'backColor'=>0xFFFFFF,
-			),
-			// page action renders "static" pages stored under 'protected/views/site/pages'
-			// They can be accessed via: index.php?r=site/page&view=FileName
-			'page'=>array(
-				'class'=>'CViewAction',
-			),
-		);
-	}
-
-	/**
-	 * This is the default 'index' action that is invoked
-	 * when an action is not explicitly requested by users.
-	 */
 	public function actionIndex()
 	{
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-
-		
-     	spl_autoload_unregister(array('YiiBase','autoload'));
-		$dropbox = Yii::getPathOfAlias('ext.dropbox');     
-		include ( $dropbox.DIRECTORY_SEPARATOR.'autoload.php');
-                $oAuth = Yii::getPathOfAlias('ext.dropbox.OAuth');     
-                include ($oAuth.DIRECTORY_SEPARATOR.'PHP.php');
-                //Yii::import('ext.dropbox.OAuth/',true);   
-       $consumerKey = 'itvelkigj22p5rw';
-       $consumerSecret = 'q75ilu33vozx423';
+	   $tokens=Yii::app()->user->getState('tokens');
+	   
+	   spl_autoload_unregister(array('YiiBase','autoload'));
+	   $dropbox = Yii::getPathOfAlias('ext.dropbox');     
+	   include ( $dropbox.DIRECTORY_SEPARATOR.'autoload.php');
        try {
-           $oauth = new Dropbox_OAuth_PHP($consumerKey, $consumerSecret);
-           $dropbox = new Dropbox_API($oauth);             
-           $info = $dropbox->getMetaData('Files');
-		   print_r($info);
+           $oauth = new Dropbox_OAuth_Curl(consumerKey, consumerSecret);
+		   $oauth->setToken($tokens);
+		   
+           $dropbox = new Dropbox_API($oauth); 
+		   
+           $info = $dropbox->getAccountInfo();
+		   
+		   echo "NOMBRE: ".$info['display_name']."<br/>";
+		   echo "EMAIL: ".$info['email']."<br/>";
+		   echo "PAIS: ".$info['country']."<br/>";
+		   		
+			echo " <br/>";
+           $info = $dropbox->getMetaData('/');
+		   echo "......LIST..... <br/>";
+		   foreach( $info['contents'] as $file  ){
+				echo " - ARCHIVO: ".$file['path'];
+				echo " - ES CARPETA: ". (($file['is_dir'])?'SI':'NO');
+				echo " - TAMAÑO: ".$file['size'];				
+				echo " <br/>";
+		   }
+		   
        } catch (Exception $e) {
            $error = "error: " . $e->getMessage();
-           print_r($error); 
+		   echo $error;
+		   //$this->redirect('Authorize');
        }
 
        spl_autoload_register(array('YiiBase','autoload'));
-
 	}
 	
-
-	/**
-	 * This is the action to handle external exceptions.
-	 */
-	public function actionError()
-	{
-		if($error=Yii::app()->errorHandler->error)
-		{
-			if(Yii::app()->request->isAjaxRequest)
-				echo $error['message'];
-			else
-				$this->render('error', $error);
-		}
+	public function actionAuthorize(){	
+	   $nextUrl='http://'.Yii::app()->request->getServerName().$this->createUrl('Authorize_step2');
+	   spl_autoload_unregister(array('YiiBase','autoload'));
+	   $dropbox = Yii::getPathOfAlias('ext.dropbox');     
+	   include ( $dropbox.DIRECTORY_SEPARATOR.'autoload.php');
+       try {
+			// Guide through OAuth workflow...
+			$oauth = new Dropbox_OAuth_Curl(consumerKey, consumerSecret);
+			$tokens = $oauth->getRequestToken();
+			$url= $oauth->getAuthorizeUrl($nextUrl);
+       }catch (Exception $e) {
+           $error = "error: " . $e->getMessage();
+		   echo $error;
+       }
+       spl_autoload_register(array('YiiBase','autoload'));
+	    Yii::app()->user->setState('tokens',$tokens);
+		
+	   echo "<script\">window.location=\"$url\";</script>";			
 	}
 
-	/**
-	 * Displays the contact page
-	 */
-	public function actionContact()
-	{
-		$model=new ContactForm;
-		if(isset($_POST['ContactForm']))
-		{
-			$model->attributes=$_POST['ContactForm'];
-			if($model->validate())
-			{
-				$name='=?UTF-8?B?'.base64_encode($model->name).'?=';
-				$subject='=?UTF-8?B?'.base64_encode($model->subject).'?=';
-				$headers="From: $name <{$model->email}>\r\n".
-					"Reply-To: {$model->email}\r\n".
-					"MIME-Version: 1.0\r\n".
-					"Content-type: text/plain; charset=UTF-8";
-
-				mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
-				Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
-				$this->refresh();
-			}
-		}
-		$this->render('contact',array('model'=>$model));
-	}
-
-	/**
-	 * Displays the login page
-	 */
-	public function actionLogin()
-	{
-		$model=new LoginForm;
-
-		// if it is ajax validation request
-		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
-		}
-
-		// collect user input data
-		if(isset($_POST['LoginForm']))
-		{
-			$model->attributes=$_POST['LoginForm'];
-			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
-		}
-		// display the login form
-		$this->render('login',array('model'=>$model));
-	}
-
-	/**
-	 * Logs out the current user and redirect to homepage.
-	 */
-	public function actionLogout()
-	{
-		Yii::app()->user->logout();
-		$this->redirect(Yii::app()->homeUrl);
+	public function actionAuthorize_step2(){
+	   $tokens=Yii::app()->user->getState('tokens');	   
+	   spl_autoload_unregister(array('YiiBase','autoload'));
+	   $dropbox = Yii::getPathOfAlias('ext.dropbox');     
+	   include ( $dropbox.DIRECTORY_SEPARATOR.'autoload.php');
+       try {
+			$oauth = new Dropbox_OAuth_Curl(consumerKey, consumerSecret);			
+			$oauth->setToken($tokens);
+			$tokens = $oauth->getAccessToken();
+			$oauth->setToken($tokens);			
+       } catch (Exception $e) {
+           $error = "error: " . $e->getMessage();
+		   echo $error;
+       }
+       spl_autoload_register(array('YiiBase','autoload'));	   
+	   Yii::app()->user->setState('tokens',$tokens);
+		   $this->redirect('index');
 	}
 }
