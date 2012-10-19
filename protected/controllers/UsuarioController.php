@@ -28,7 +28,7 @@ class UsuarioController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','registrar','captcha'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -45,7 +45,22 @@ class UsuarioController extends Controller
 		);
 	}
 
-	/**
+	//Acciones por defectos, generar un captcha. 
+        public function actions()
+	{
+		return array(
+			// captcha action renders the CAPTCHA image displayed on the contact page
+			'captcha'=>array(
+				'class'=>'CCaptchaAction',
+				'backColor'=>0xFFFFFF,
+			),
+			
+			
+		);
+	}
+        
+        
+        /**
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
@@ -79,6 +94,29 @@ class UsuarioController extends Controller
 		));
 	}
 
+        //Registro de nuevo Usuario 
+        public function actionRegistrar()
+	{
+		$model=new Usuario;
+
+		// Uncomment the following line if AJAX validation is needed
+		 $this->performAjaxValidation($model);
+
+		if(isset($_POST['Usuario']))
+		{
+			$model->attributes=$_POST['Usuario'];
+			if($model->save())
+				$this->redirect(array('view','id'=>$model->id_usuario));
+		}
+
+		$this->render('registrar',array(
+			'model'=>$model,
+		));
+	}
+
+        
+        
+        
 	/**
 	 * Updates a particular model.
 	 * If update is successful, the browser will be redirected to the 'view' page.

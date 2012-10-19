@@ -18,7 +18,10 @@
  */
 class Usuario extends CActiveRecord
 {
-	/**
+	public $verifyCode;
+	public $clave2;
+	
+    /**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
 	 * @return Usuario the static model class
@@ -45,11 +48,17 @@ class Usuario extends CActiveRecord
 		// will receive user inputs.
 		return array(
                         array('usuario','unique'),
-			array('nombre, apellido, usuario, clave, usuario_dropbox, password_dropbox, email', 'length', 'max'=>30),
+                        array('email','email'),
+			array('nombre, apellido, usuario, clave, clave2, usuario_dropbox, password_dropbox, email', 'length', 'max'=>30),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id_usuario, nombre, apellido, usuario, clave, usuario_dropbox, password_dropbox, email', 'safe', 'on'=>'search'),
-		);
+		        array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
+                        array('clave2', 'compare', 'compareAttribute'=>'clave'),
+                        
+
+
+                    );
 	}
 
 	/**
@@ -75,9 +84,12 @@ class Usuario extends CActiveRecord
 			'apellido' => 'Apellido',
 			'usuario' => 'Usuario',
 			'clave' => 'Clave',
-			'usuario_dropbox' => 'Usuario Dropbox',
+			'clave2' => 'Repita Su Password',
+                        'usuario_dropbox' => 'Usuario Dropbox',
 			'password_dropbox' => 'Password Dropbox',
 			'email' => 'Email',
+                        'verifyCode'=>'Verification Code',
+
 		);
 	}
 

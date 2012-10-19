@@ -8,7 +8,8 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Evernote Dropbox APP',
-
+'sourceLanguage'    =>'en',
+'language'          =>'es',
 	// preloading 'log' component
 	'preload'=>array('log'),
 
