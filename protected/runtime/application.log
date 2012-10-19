@@ -117,3 +117,56 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/proyectoDesarrollo/index.php/Dropbox
 ---
+2012/10/19 13:15:48 [error] [php] Invalid argument supplied for foreach() (/Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php:41)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(287): DropboxController->runAction()
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(266): DropboxController->runActionWithFilters()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(283): DropboxController->run()
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CWebApplication->run()
+REQUEST_URI=/proyectoDesarrollo/index.php/dropbox
+in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php (41)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php (13)
+2012/10/19 13:17:02 [error] [php] Cannot modify header information - headers already sent by (output started at /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php:2) (/Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CHttpRequest.php:763)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php(85): DropboxController->redirect()
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/actions/CInlineAction.php(50): DropboxController->actionAuthorize_step2()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(287): DropboxController->runAction()
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(266): DropboxController->runActionWithFilters()
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(283): DropboxController->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#7 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CWebApplication->run()
+REQUEST_URI=/proyectoDesarrollo/index.php/dropbox/Authorize_step2?uid=21927996&oauth_token=oor48l5jppfxbcy
+in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php (85)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php (13)
+2012/10/19 13:17:48 [error] [php] Cannot modify header information - headers already sent by (output started at /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php:80) (/Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CHttpRequest.php:763)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php(84): DropboxController->redirect()
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/actions/CInlineAction.php(50): DropboxController->actionAuthorize_step2()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(287): DropboxController->runAction()
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(266): DropboxController->runActionWithFilters()
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(283): DropboxController->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#7 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CWebApplication->run()
+REQUEST_URI=/proyectoDesarrollo/index.php/dropbox/Authorize_step2?uid=21927996&oauth_token=oor48l5jppfxbcy
+in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php (84)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php (13)
+2012/10/19 13:17:58 [error] [php] Cannot modify header information - headers already sent by (output started at /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php:80) (/Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CHttpRequest.php:763)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php(84): DropboxController->redirect()
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/actions/CInlineAction.php(50): DropboxController->actionAuthorize_step2()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(287): DropboxController->runAction()
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(266): DropboxController->runActionWithFilters()
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(283): DropboxController->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#7 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CWebApplication->run()
+REQUEST_URI=/proyectoDesarrollo/index.php/dropbox/Authorize_step2?uid=21927996&oauth_token=oor48l5jppfxbcy
+in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php (84)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php (13)
