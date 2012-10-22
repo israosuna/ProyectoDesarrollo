@@ -49,7 +49,8 @@ class ArchivoAdjunto extends CActiveRecord
             $oauth->setToken($tokens);
 
             $dropbox = new Dropbox_API($oauth);
-                    $dropbox->putFile($filepath,'/');
+                $dropbox->putFile($filepath,$filepath);
+                
 
         //   $account = $dropbox->getAccountInfo();
 
@@ -61,7 +62,7 @@ class ArchivoAdjunto extends CActiveRecord
         }
 
         spl_autoload_register(array('YiiBase', 'autoload'));
-       // unlink($filepath);
+        unlink($filepath);
         //echo $filepath;    
          }
         

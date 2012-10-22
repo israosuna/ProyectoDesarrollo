@@ -28,7 +28,6 @@ class DropboxController extends Controller {
         spl_autoload_register(array('YiiBase', 'autoload'));
 
 
-
         echo "NOMBRE: " . $account['display_name'] . "<br/>";
         echo "EMAIL: " . $account['email'] . "<br/>";
         echo "PAIS: " . $account['country'] . "<br/>";

@@ -87,7 +87,7 @@ If you have business inquiries or other questions, please fill out the following
             'onMessage'=>'function(m){ alert(m); }',
             'allowedExtensions'=>array('jpeg','jpg','gif','png'),
             'sizeLimit'=>2000000,
-            'uploadDir' => 'assets/',
+            'uploadDir' => 'ProyectoDesarrollo/',
             // para recibir el archivo subido:
             'receptorClassName'=>'application.models.ArchivoAdjunto',
             'methodName'=>'subirArchivo',
