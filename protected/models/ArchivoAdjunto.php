@@ -23,7 +23,8 @@ class ArchivoAdjunto extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-
+        public $file;
+                
 	/**
 	 * @return string the associated database table name
 	 */
@@ -48,19 +49,20 @@ class ArchivoAdjunto extends CActiveRecord
             $oauth->setToken($tokens);
 
             $dropbox = new Dropbox_API($oauth);
-            $account = $dropbox->getAccountInfo();
+                    $dropbox->putFile($filepath,'/');
 
-            $info = $dropbox->getMetaData('/');
+        //   $account = $dropbox->getAccountInfo();
+
+        //    $info = $dropbox->getMetaData('/');
         } catch (Exception $e) {
             $error = "error: " . $e->getMessage();
-            //echo $error;
-            $this->redirect('dropbox/Authorize');
+            echo $error;
+           // $this->redirect('dropbox/Authorize');
         }
 
         spl_autoload_register(array('YiiBase', 'autoload'));
-        $dropbox->putFile($filepath,'/');
-        unlink($filepath);
-        echo $filepath;    
+       // unlink($filepath);
+        //echo $filepath;    
          }
         
         
@@ -78,6 +80,7 @@ class ArchivoAdjunto extends CActiveRecord
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id_adjunto, ruta_archivo, extension, nombre_archivo', 'safe', 'on'=>'search'),
+                        array('file','file','types'=>'jpg, gif, png'),
 		);
 	}
 

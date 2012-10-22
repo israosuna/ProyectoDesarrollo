@@ -1,7 +1,6 @@
 <?php
 
-DEFINE('consumerKey', 'itvelkigj22p5rw');
-DEFINE('consumerSecret', 'q75ilu33vozx423');
+
 
 class DropboxController extends Controller {
 
@@ -67,7 +66,7 @@ class DropboxController extends Controller {
 
         echo "<script>window.location=\"$url\";</script>";
     }
-
+    
     public function actionAuthorize_step2() {
         $tokens = Yii::app()->user->getState('tokens');
         spl_autoload_unregister(array('YiiBase', 'autoload'));
@@ -86,5 +85,26 @@ class DropboxController extends Controller {
         Yii::app()->user->setState('tokens', $tokens);
         $this->redirect('index');
     }
-
+    public function actionSubir(){
+        
+         $model=new ArchivoAdjunto();
+        if(isset($_POST['ArchivoAdjunto']))
+        {
+            $model->attributes=$_POST['ArchivoAdjunto'];
+            $model->file=CUploadedFile::getInstance($model,'file');
+            $model->file->saveAs('assets/'.$model->file->name);
+            $model->subirArchivo('assets/'.$model->file->name, '');
+            if($model->save())
+            {
+               
+                // redirect to success page
+            }
+            else{
+                
+                echo "no se pudo guardar";
+            }
+            
+        }
+        $this->render('subir', array('model'=>$model));
+    }
 }

@@ -1,5 +1,6 @@
 <?php
-
+DEFINE('consumerKey', 'itvelkigj22p5rw');
+DEFINE('consumerSecret', 'q75ilu33vozx423');
 // uncomment the following to define a path alias
 // Yii::setPathOfAlias('local','path/to/local-folder');
 

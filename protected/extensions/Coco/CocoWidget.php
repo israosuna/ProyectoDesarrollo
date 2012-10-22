@@ -158,7 +158,7 @@ echo
 	// de: EYuiActionRunnable
 	public function runAction($action,$data) {
 		Yii::log('ACTION CALLED - action is: '.$action,'info');
-
+                $dummie= new CException();
 		$vars = unserialize($data);
 
 		$this->allowedExtensions = $vars['allowedExtensions'];
@@ -208,7 +208,9 @@ echo
 	}
 
 	private function _invokeMethod($upladedFilePath,$userdata){
-		try{
+	Yii::log('hola llamando metodo','error');	
+            try{
+                   
 			if(!empty($this->receptorClassName)){
 				$phpFilepath = Yii::getPathOfAlias($this->receptorClassName).".php";
 				$className = $this->getClassNameFromPhp($phpFilepath);
@@ -248,6 +250,7 @@ echo
 				}
 			}
 		}catch(Exception $e){
+                    Yii::log(print_r($e,true),'error');
 			Yii::log(__CLASS__.' an error occurs.','error');
 		}
 	}

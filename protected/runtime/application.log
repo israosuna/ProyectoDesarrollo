@@ -1,4 +1,78 @@
-2012/10/22 16:41:02 [error] [application] CocoWidget an error occurs.
-in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/extensions/coco/CocoWidget.php (251)
+2012/10/22 17:30:52 [warning] [application] Failed to set unsafe attribute "file" of "ArchivoAdjunto".
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/controllers/DropboxController.php (94)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php (13)
+2012/10/22 17:31:23 [warning] [application] Failed to set unsafe attribute "file" of "ArchivoAdjunto".
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/controllers/DropboxController.php (94)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php (13)
+2012/10/22 17:32:26 [warning] [application] Failed to set unsafe attribute "file" of "ArchivoAdjunto".
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/controllers/DropboxController.php (94)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php (13)
+2012/10/22 17:32:26 [error] [php] move_uploaded_file() [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: The second argument to copy() function cannot be a directory (/Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CUploadedFile.php:197)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/actions/CInlineAction.php(50): DropboxController->actionSubir()
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(287): DropboxController->runAction()
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(266): DropboxController->runActionWithFilters()
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(283): DropboxController->run()
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php(13): CWebApplication->run()
+REQUEST_URI=/proyectodesarrollo/index.php/dropbox/subir
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/controllers/DropboxController.php (96)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php (13)
+2012/10/22 17:33:33 [warning] [application] Failed to set unsafe attribute "file" of "ArchivoAdjunto".
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/controllers/DropboxController.php (94)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php (13)
+2012/10/22 17:35:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "dropbox" solicitada.' in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php:484
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(271): CController->missingAction('dropbox')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(283): CController->run('dropbox')
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('dropbox/dropbox...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/proyectodesarrollo/index.php/dropbox/dropbox/Authorize
+---
+2012/10/22 17:35:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "dropbox" solicitada.' in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php:484
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(271): CController->missingAction('dropbox')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(283): CController->run('dropbox')
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('dropbox/dropbox...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/proyectodesarrollo/index.php/dropbox/dropbox/Authorize
+---
+2012/10/22 17:38:38 [warning] [application] Failed to set unsafe attribute "file" of "ArchivoAdjunto".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/controllers/DropboxController.php (94)
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/index.php (13)
+2012/10/22 17:52:31 [error] [application] hola llamando metodo
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/extensions/coco/CocoWidget.php (211)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/extensions/coco/CocoWidget.php (206)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/extensions/coco/CocoWidget.php (190)
+2012/10/22 17:54:51 [error] [application] hola llamando metodo
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/extensions/coco/CocoWidget.php (211)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/extensions/coco/CocoWidget.php (206)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/extensions/coco/CocoWidget.php (190)
+2012/10/22 17:55:32 [error] [application] hola llamando metodo
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/extensions/coco/CocoWidget.php (211)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/extensions/coco/CocoWidget.php (206)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/extensions/coco/CocoWidget.php (190)
+2012/10/22 17:56:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "dropbox" solicitada.' in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php:484
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(271): CController->missingAction('dropbox')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(283): CController->run('dropbox')
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('dropbox/dropbox...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/proyectodesarrollo/index.php/dropbox/dropbox/Authorize
+---
+2012/10/22 17:56:49 [error] [application] hola llamando metodo
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/extensions/coco/CocoWidget.php (211)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/extensions/coco/CocoWidget.php (206)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/extensions/coco/CocoWidget.php (190)
+2012/10/22 17:57:49 [error] [application] hola llamando metodo
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/extensions/coco/CocoWidget.php (211)
 in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/extensions/coco/CocoWidget.php (206)
 in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/extensions/coco/CocoWidget.php (190)
