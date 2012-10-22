@@ -813,3 +813,7 @@ in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/extensions
 in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/extensions/coco/CocoWidget.php (251)
 in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/extensions/coco/CocoWidget.php (206)
 in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/extensions/coco/CocoWidget.php (190)
+2012/10/22 15:47:31 [error] [application] CocoWidget an error occurs.
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/extensions/coco/CocoWidget.php (251)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/extensions/coco/CocoWidget.php (206)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/extensions/coco/CocoWidget.php (190)
