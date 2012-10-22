@@ -90,7 +90,7 @@ If you have business inquiries or other questions, please fill out the following
             'uploadDir' => 'assets/',
             // para recibir el archivo subido:
             'receptorClassName'=>'application.models.ArchivoAdjunto',
-            'methodName'=>'subirarchivo',
+            'methodName'=>'subirArchivo',
             'userdata'=>'hola',
         ));
    ?>

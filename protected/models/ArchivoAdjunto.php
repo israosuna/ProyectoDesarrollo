@@ -36,7 +36,7 @@ class ArchivoAdjunto extends CActiveRecord
         /**
          *Funcion para subir el archivo de dropbox. 
          */
-         public function subirarchivo($filepath,$userdata)
+         public function subirArchivo($filepath,$userdata)
          {
                  $tokens = Yii::app()->user->getState('tokens');
 
@@ -60,7 +60,7 @@ class ArchivoAdjunto extends CActiveRecord
         spl_autoload_register(array('YiiBase', 'autoload'));
         $dropbox->putFile($filepath,'/');
         unlink($filepath);
-
+        echo $filepath;    
          }
         
         
