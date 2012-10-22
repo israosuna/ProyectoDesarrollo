@@ -1,109 +1,129 @@
 <?php
 
-class SiteController extends Controller
+/**
+ * This is the model class for table "archivo_adjunto".
+ *
+ * The followings are the available columns in table 'archivo_adjunto':
+ * @property integer $id_adjunto
+ * @property string $ruta_archivo
+ * @property string $extension
+ * @property string $nombre_archivo
+ *
+ * The followings are the available model relations:
+ * @property Nota[] $notas
+ */
+class ArchivoAdjunto extends CActiveRecord
 {
 	/**
-	 * Declares class-based actions.
+	 * Returns the static model of the specified AR class.
+	 * @param string $className active record class name.
+	 * @return ArchivoAdjunto the static model class
 	 */
-	public function actions()
+	public static function model($className=__CLASS__)
 	{
+		return parent::model($className);
+	}
+
+	/**
+	 * @return string the associated database table name
+	 */
+	public function tableName()
+	{
+		return 'archivo_adjunto';
+	}
+
+	
+        /**
+         *Funcion para subir el archivo de dropbox. 
+         */
+         public function subirarchivo($filepath,$userdata)
+         {
+                 $tokens = Yii::app()->user->getState('tokens');
+
+        spl_autoload_unregister(array('YiiBase', 'autoload'));
+        $dropbox = Yii::getPathOfAlias('ext.dropbox');
+        include ( $dropbox . DIRECTORY_SEPARATOR . 'autoload.php');
+        try {
+            $oauth = new Dropbox_OAuth_Curl(consumerKey, consumerSecret);
+            $oauth->setToken($tokens);
+
+            $dropbox = new Dropbox_API($oauth);
+            $account = $dropbox->getAccountInfo();
+
+            $info = $dropbox->getMetaData('/');
+        } catch (Exception $e) {
+            $error = "error: " . $e->getMessage();
+            //echo $error;
+            $this->redirect('dropbox/Authorize');
+        }
+
+        spl_autoload_register(array('YiiBase', 'autoload'));
+        $dropbox->putFile($filepath,'/');
+        unlink($filepath);
+
+         }
+        
+        
+        /**
+	 * @return array validation rules for model attributes.
+	 */
+	public function rules()
+	{
+		// NOTE: you should only define rules for those attributes that
+		// will receive user inputs.
 		return array(
-			// captcha action renders the CAPTCHA image displayed on the contact page
-			'captcha'=>array(
-				'class'=>'CCaptchaAction',
-				'backColor'=>0xFFFFFF,
-			),
-			// page action renders "static" pages stored under 'protected/views/site/pages'
-			// They can be accessed via: index.php?r=site/page&view=FileName
-			'page'=>array(
-				'class'=>'CViewAction',
-			),
+			array('id_adjunto', 'required'),
+			array('id_adjunto', 'numerical', 'integerOnly'=>true),
+			array('ruta_archivo, extension, nombre_archivo', 'length', 'max'=>30),
+			// The following rule is used by search().
+			// Please remove those attributes that should not be searched.
+			array('id_adjunto, ruta_archivo, extension, nombre_archivo', 'safe', 'on'=>'search'),
 		);
 	}
 
 	/**
-	 * This is the default 'index' action that is invoked
-	 * when an action is not explicitly requested by users.
+	 * @return array relational rules.
 	 */
-	public function actionIndex()
+	public function relations()
 	{
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+		// NOTE: you may need to adjust the relation name and the related
+		// class name for the relations automatically generated below.
+		return array(
+			'notas' => array(self::MANY_MANY, 'Nota', 'nota_adjunto(id_adjunto, id_nota)'),
+		);
 	}
 
 	/**
-	 * This is the action to handle external exceptions.
+	 * @return array customized attribute labels (name=>label)
 	 */
-	public function actionError()
+	public function attributeLabels()
 	{
-		if($error=Yii::app()->errorHandler->error)
-		{
-			if(Yii::app()->request->isAjaxRequest)
-				echo $error['message'];
-			else
-				$this->render('error', $error);
-		}
+		return array(
+			'id_adjunto' => 'Id Adjunto',
+			'ruta_archivo' => 'Ruta Archivo',
+			'extension' => 'Extension',
+			'nombre_archivo' => 'Nombre Archivo',
+		);
 	}
 
 	/**
-	 * Displays the contact page
+	 * Retrieves a list of models based on the current search/filter conditions.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
-	public function actionContact()
+	public function search()
 	{
-		$model=new ContactForm;
-		if(isset($_POST['ContactForm']))
-		{
-			$model->attributes=$_POST['ContactForm'];
-			if($model->validate())
-			{
-				$name='=?UTF-8?B?'.base64_encode($model->name).'?=';
-				$subject='=?UTF-8?B?'.base64_encode($model->subject).'?=';
-				$headers="From: $name <{$model->email}>\r\n".
-					"Reply-To: {$model->email}\r\n".
-					"MIME-Version: 1.0\r\n".
-					"Content-type: text/plain; charset=UTF-8";
+		// Warning: Please modify the following code to remove attributes that
+		// should not be searched.
 
-				mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
-				Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
-				$this->refresh();
-			}
-		}
-		$this->render('contact',array('model'=>$model));
-	}
+		$criteria=new CDbCriteria;
 
-	/**
-	 * Displays the login page
-	 */
-	public function actionLogin()
-	{
-		$model=new LoginForm;
+		$criteria->compare('id_adjunto',$this->id_adjunto);
+		$criteria->compare('ruta_archivo',$this->ruta_archivo,true);
+		$criteria->compare('extension',$this->extension,true);
+		$criteria->compare('nombre_archivo',$this->nombre_archivo,true);
 
-		// if it is ajax validation request
-		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
-		}
-
-		// collect user input data
-		if(isset($_POST['LoginForm']))
-		{
-			$model->attributes=$_POST['LoginForm'];
-			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
-		}
-		// display the login form
-		$this->render('login',array('model'=>$model));
-	}
-
-	/**
-	 * Logs out the current user and redirect to homepage.
-	 */
-	public function actionLogout()
-	{
-		Yii::app()->user->logout();
-		$this->redirect(Yii::app()->homeUrl);
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
 	}
 }
