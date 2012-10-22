@@ -805,3 +805,11 @@ Stack trace:
 REQUEST_URI=/proyectoDesarrollo/index.php/site/images/page1_img2.jpg
 HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/site/login
 ---
+2012/10/22 15:37:24 [error] [application] CocoWidget an error occurs.
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/extensions/coco/CocoWidget.php (251)
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/extensions/coco/CocoWidget.php (206)
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/extensions/coco/CocoWidget.php (190)
+2012/10/22 15:39:41 [error] [application] CocoWidget an error occurs.
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/extensions/coco/CocoWidget.php (251)
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/extensions/coco/CocoWidget.php (206)
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/extensions/coco/CocoWidget.php (190)

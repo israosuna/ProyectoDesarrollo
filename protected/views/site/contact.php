@@ -1,4 +1,4 @@
-<?php
+<?php //
 /* @var $this SiteController */
 /* @var $model ContactForm */
 /* @var $form CActiveForm */
@@ -77,7 +77,24 @@ If you have business inquiries or other questions, please fill out the following
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Submit'); ?>
 	</div>
-
+<div class="row">
+    <?php
+    $this->widget('ext.coco.CocoWidget'
+        ,array(
+            'id'=>'cocowidget1',
+            'onCompleted'=>'function(id,filename,jsoninfo){  }',
+            'onCancelled'=>'function(id,filename){ alert("cancelled"); }',
+            'onMessage'=>'function(m){ alert(m); }',
+            'allowedExtensions'=>array('jpeg','jpg','gif','png'),
+            'sizeLimit'=>2000000,
+            'uploadDir' => 'assets/',
+            // para recibir el archivo subido:
+            'receptorClassName'=>'application.models.ArchivoAdjunto',
+            'methodName'=>'subirarchivo',
+            'userdata'=>'hola',
+        ));
+   ?>
+</div>    
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
