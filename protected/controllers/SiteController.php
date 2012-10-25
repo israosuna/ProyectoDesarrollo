@@ -69,6 +69,45 @@ class SiteController extends Controller {
     }
 
     /**
+     *Filtro para controlar acceso a la aplicacion
+     * @return type 
+     */
+    public function filters()
+	{
+		return array(
+			'accessControl', // perform access control for CRUD operations
+			'postOnly + delete', // we only allow deletion via POST request
+		);
+	}
+
+    
+   /**
+    *Validando que Todo usuario deba estar registrado.
+    * @return type 
+    */
+    public function accessRules()
+	{
+		return array(
+			array('allow',  // allow all users to perform 'index' and 'view' actions
+				'actions'=>array('login'),
+				'users'=>array('*'),
+			),
+			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+				'actions'=>array('index','contact','about','logout','captcha'),
+				'users'=>array('@'),
+			),
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+				'actions'=>array('admin','delete'),
+				'users'=>array('admin'),
+			),
+			array('deny',  // deny all users
+				'users'=>array('*'),
+			),
+		);
+	}
+    
+    
+    /**
      * Displays the login page
      */
     public function actionLogin() {

@@ -40,10 +40,11 @@
                                 <?php
                                 $this->widget('zii.widgets.CMenu', array(
                                     'items' => array(
-                                        array('label' => 'Home', 'url' => array('/site/index')),
-                                        array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
-                                        array('label' => 'Contact', 'url' => array('/site/contact')),
+                                        array('label' => 'Inicio', 'url' => array('/site/index')),
+                                        array('label' => 'Acerca', 'url' => array('/site/page', 'view' => 'about')),
+                                        array('label' => 'Contacto', 'url' => array('/site/contact')),
                                         array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
+                                        array('label' => 'Registro', 'url' => array('/usuario/registrar'), 'visible' => Yii::app()->user->isGuest),
                                         array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
                                     ), 'id' => 'menu'
                                 ));
@@ -82,13 +83,19 @@
             <div class="main">
                 <div id="footer_menu">
                     <nav>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="Researches.html">Researches</a></li>
-                            <li><a href="Services.html">Services</a></li>
-                            <li><a href="Events.html">Events</a></li>
-                            <li class="bg_none"><a href="Contacts.html">Contacts</a></li>
-                        </ul>
+                      
+                                <?php
+                                $this->widget('zii.widgets.CMenu', array(
+                                    'items' => array(
+                                        array('label' => 'Inicio', 'url' => array('/site/index')),
+                                        array('label' => 'Acerca', 'url' => array('/site/page', 'view' => 'about')),
+                                        array('label' => 'Contacto', 'url' => array('/site/contact')),
+                                        array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
+                                        array('label' => 'Registro', 'url' => array('/usuario/registrar'), 'visible' => Yii::app()->user->isGuest),
+                                        array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
+                                    ), 
+                                ));
+                                ?>
                     </nav>
                 </div>
             </div>
@@ -96,8 +103,7 @@
         <div class="body5">
             <div class="main">
                 <footer>
-                    <a href="http://www.templatemonster.com/" target="_blank">Website template</a> designed by TemplateMonster.com<br>
-                    <a href="http://www.templates.com/product/3d-models/" target="_blank">3D Models</a> provided by Templates.com
+                    <a href="http://www.templatemonster.com/" target="_blank">Israel Osuna</a> Graciela Lucena & Diego Vierma<br>
                 </footer>
             </div>
         </div>

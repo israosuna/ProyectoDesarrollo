@@ -1,6 +1,7 @@
 <?php
 
-
+DEFINE('consumerKey', 'itvelkigj22p5rw');
+DEFINE('consumerSecret', 'q75ilu33vozx423');
 
 class DropboxController extends Controller {
 
@@ -18,7 +19,7 @@ class DropboxController extends Controller {
             $dropbox = new Dropbox_API($oauth);
             $account = $dropbox->getAccountInfo();
 
-            $info = $dropbox->getMetaData('/');
+            $info = $dropbox->getMetaData('/ProyectoDesarrollo');
         } catch (Exception $e) {
             $error = "error: " . $e->getMessage();
             //echo $error;
@@ -26,7 +27,6 @@ class DropboxController extends Controller {
         }
 
         spl_autoload_register(array('YiiBase', 'autoload'));
-
 
         echo "NOMBRE: " . $account['display_name'] . "<br/>";
         echo "EMAIL: " . $account['email'] . "<br/>";
@@ -36,14 +36,19 @@ class DropboxController extends Controller {
         echo "......LIST..... <br/>";
 
         foreach ($info['contents'] as $file) {
-            //$thumbnail= $dropbox->getThumbnail($file['path']);
-           
-            //echo "<img src='$thumbnail'>";
-            echo " - ARCHIVO: " . $file['path'];
-            echo " - ES CARPETA: " . (($file['is_dir']) ? 'SI' : 'NO');
-            echo " - TAMAÑO: " . $file['size'];
+            $filename= basename($file['path']);
+            $fileesize= $file['size'];
+            $fullfilesize= $file['path'];
+            $dropbox->getThumbnail($file['path'],'small','dropbox');
+            echo('          <li class="fileListItem"><span class="fileImage">&nbsp;</span><span class="fileName">' .
+                          $filename . '</span><span class="fileSize">' . $filesize . "</span></li>\n");
+ 
+//            echo " - ARCHIVO: " . $file['path'];
+//            echo " - ES CARPETA: " . (($file['is_dir']) ? 'SI' : 'NO');
+//            echo " - TAMAÑO: " . $file['size'];
             echo " <br/>";
         }
+                
     }
 
     public function actionAuthorize() {

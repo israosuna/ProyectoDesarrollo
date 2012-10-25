@@ -1,34 +1,350 @@
-2012/10/22 21:53:42 [warning] [application] Failed to set unsafe attribute "file" of "ArchivoAdjunto".
-in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/controllers/DropboxController.php (93)
-in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/index.php (13)
-2012/10/22 21:54:23 [warning] [application] Failed to set unsafe attribute "file" of "ArchivoAdjunto".
-in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/controllers/DropboxController.php (93)
-in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/index.php (13)
-2012/10/22 22:06:49 [error] [application] CocoWidget. Please increase post_max_size and upload_max_filesize to 2000000000
-in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/extensions/coco/CocoWidget.php (181)
-in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/extensions/coco/CocoAction.php (20)
-in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/index.php (13)
-2012/10/22 22:07:00 [error] [application] CocoWidget. Please increase post_max_size and upload_max_filesize to 2000000000
-in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/extensions/coco/CocoWidget.php (181)
-in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/extensions/coco/CocoAction.php (20)
-in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/index.php (13)
-2012/10/22 22:07:48 [error] [application] CocoWidget. Please increase post_max_size and upload_max_filesize to 2000000000
-in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/extensions/coco/CocoWidget.php (181)
-in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/extensions/coco/CocoAction.php (20)
-in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/index.php (13)
-2012/10/22 22:09:01 [error] [application] CocoWidget. Please increase post_max_size and upload_max_filesize to 2000000000
-in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/extensions/coco/CocoWidget.php (181)
-in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/extensions/coco/CocoAction.php (20)
-in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/index.php (13)
-2012/10/22 22:09:40 [error] [application] CocoWidget. Please increase post_max_size and upload_max_filesize to 2000000000
-in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/extensions/coco/CocoWidget.php (181)
-in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/extensions/coco/CocoAction.php (20)
-in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/index.php (13)
-2012/10/22 22:10:24 [error] [application] CocoWidget. Please increase post_max_size and upload_max_filesize to 2000000000
-in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/extensions/coco/CocoWidget.php (181)
-in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/extensions/coco/CocoAction.php (20)
-in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/index.php (13)
-2012/10/22 22:10:57 [error] [application] CocoWidget. Please increase post_max_size and upload_max_filesize to 2000000000
-in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/extensions/coco/CocoWidget.php (181)
-in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/extensions/coco/CocoAction.php (20)
-in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/index.php (13)
+2012/10/24 21:22:52 [error] [exception.Exception] exception 'Exception' with message 'This method only supports the `php` response format' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/extensions/dropbox/API.php:267
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php(41): Dropbox_API->thumbnails('/ProyectoDesarr...', 'image/png', 'dropbox')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/actions/CInlineAction.php(50): DropboxController->actionIndex()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(283): CController->run('')
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('dropbox')
+#7 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/24 21:23:09 [error] [exception.Exception] exception 'Exception' with message 'This method only supports the `php` response format' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/extensions/dropbox/API.php:267
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php(41): Dropbox_API->thumbnails('/ProyectoDesarr...', 'image/png')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/actions/CInlineAction.php(50): DropboxController->actionIndex()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(283): CController->run('')
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('dropbox')
+#7 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/24 21:24:34 [error] [exception.Exception] exception 'Exception' with message 'This method only supports the `php` response format' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/extensions/dropbox/API.php:267
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php(41): Dropbox_API->thumbnails('/ProyectoDesarr...', 'image/png', 'small')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/actions/CInlineAction.php(50): DropboxController->actionIndex()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(283): CController->run('')
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('dropbox')
+#7 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/24 21:25:01 [error] [exception.Exception] exception 'Exception' with message 'This method only supports the `php` response format' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/extensions/dropbox/API.php:267
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php(41): Dropbox_API->thumbnails('/ProyectoDesarr...', 'PNG', 'small')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/actions/CInlineAction.php(50): DropboxController->actionIndex()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(283): CController->run('')
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('dropbox')
+#7 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/24 21:37:13 [error] [php] Cannot modify header information - headers already sent by (output started at /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php:30) (/Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php:42)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(287): DropboxController->runAction()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(266): DropboxController->runActionWithFilters()
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(283): DropboxController->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CWebApplication->run()
+REQUEST_URI=/proyectoDesarrollo/index.php/dropbox
+in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php (42)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php (13)
+2012/10/24 21:40:35 [error] [php] Cannot modify header information - headers already sent by (output started at /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php:2) (/Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php:2)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(277): CWebApplication->createController()
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CWebApplication->run()
+REQUEST_URI=/proyectoDesarrollo/index.php/dropbox
+in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php (2)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php (13)
+2012/10/24 21:40:36 [error] [php] Cannot modify header information - headers already sent by (output started at /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php:2) (/Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php:2)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(277): CWebApplication->createController()
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CWebApplication->run()
+REQUEST_URI=/proyectoDesarrollo/index.php/dropbox
+in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php (2)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php (13)
+2012/10/24 21:40:38 [error] [php] Cannot modify header information - headers already sent by (output started at /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php:2) (/Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php:2)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(277): CWebApplication->createController()
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CWebApplication->run()
+REQUEST_URI=/proyectoDesarrollo/index.php/dropbox
+in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php (2)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php (13)
+2012/10/24 21:40:58 [error] [php] Cannot modify header information - headers already sent by (output started at /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php:2) (/Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php:2)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(277): CWebApplication->createController()
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CWebApplication->run()
+REQUEST_URI=/proyectoDesarrollo/index.php/dropbox
+in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php (2)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php (13)
+2012/10/24 21:41:12 [error] [php] Cannot modify header information - headers already sent by (output started at /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php:30) (/Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php:42)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(287): DropboxController->runAction()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(266): DropboxController->runActionWithFilters()
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(283): DropboxController->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CWebApplication->run()
+REQUEST_URI=/proyectoDesarrollo/index.php/dropbox
+in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php (42)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php (13)
+2012/10/24 21:49:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "android-1.png/img/error.gif"' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('android-1.png/i...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/android-1.png/img/error.gif
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/24 21:49:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "100px-Blender_2.5_Icon_Pixmap_for_Gnome.png/img/error.gif"' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('100px-Blender_2...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/100px-Blender_2.5_Icon_Pixmap_for_Gnome.png/img/error.gif
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/24 21:49:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "android-logo-font.png/img/error.gif"' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('android-logo-fo...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/android-logo-font.png/img/error.gif
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/24 21:49:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "android-logo-font54.png/img/error.gif"' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('android-logo-fo...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/android-logo-font54.png/img/error.gif
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/24 21:49:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Friday Tag Game.jpg/img/error.gif"' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('Friday Tag Game...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/Friday%20Tag%20Game.jpg/img/error.gif
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/24 21:49:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Android-2.png/img/error.gif"' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('Android-2.png/i...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/Android-2.png/img/error.gif
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/24 21:50:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Android-2.png"' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('Android-2.png')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/Android-2.png/
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/24 21:50:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "100px-Blender_2.5_Icon_Pixmap_for_Gnome.png"' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('100px-Blender_2...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/100px-Blender_2.5_Icon_Pixmap_for_Gnome.png/
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/24 21:50:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Friday Tag Game.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('Friday Tag Game...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/Friday%20Tag%20Game.jpg/
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/24 21:50:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "android-logo-font.png"' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('android-logo-fo...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/android-logo-font.png/
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/24 21:50:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "android-1.png"' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('android-1.png')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/android-1.png/
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/24 21:50:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "android-logo-font54.png"' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('android-logo-fo...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/android-logo-font54.png/
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/24 21:51:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "100px-Blender_2.5_Icon_Pixmap_for_Gnome.png"' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('100px-Blender_2...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/100px-Blender_2.5_Icon_Pixmap_for_Gnome.png
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/24 21:51:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Friday Tag Game.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('Friday Tag Game...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/Friday%20Tag%20Game.jpg
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/24 21:51:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "android-logo-font54.png"' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('android-logo-fo...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/android-logo-font54.png
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/24 21:51:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "android-logo-font.png"' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('android-logo-fo...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/android-logo-font.png
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/24 21:51:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "android-1.png"' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('android-1.png')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/android-1.png
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/24 21:51:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Android-2.png"' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('Android-2.png')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/Android-2.png
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/24 21:52:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "100px-Blender_2.5_Icon_Pixmap_for_Gnome.png"' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('100px-Blender_2...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/100px-Blender_2.5_Icon_Pixmap_for_Gnome.png
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/24 21:52:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Android-2.png"' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('Android-2.png')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/Android-2.png
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/24 21:52:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "android-1.png"' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('android-1.png')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/android-1.png
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/24 21:52:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "android-logo-font.png"' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('android-logo-fo...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/android-logo-font.png
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/24 21:52:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Friday Tag Game.jpg"' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('Friday Tag Game...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/Friday%20Tag%20Game.jpg
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/24 21:52:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "android-logo-font54.png"' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('android-logo-fo...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/android-logo-font54.png
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/dropbox
+---
+2012/10/24 22:18:42 [error] [exception.Dropbox_Exception_Forbidden] exception 'Dropbox_Exception_Forbidden' with message 'Forbidden.
+						This could mean a bad OAuth request, or a file or folder already existing at the target location.
+						Invalid or missing signature
+' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/extensions/dropbox/OAuth/Curl.php:124
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/extensions/dropbox/API.php(267): Dropbox_OAuth_Curl->fetch('https://api-con...', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/DropboxController.php(42): Dropbox_API->getThumbnail('/ProyectoDesarr...', 'small')
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/actions/CInlineAction.php(50): DropboxController->actionIndex()
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(283): CController->run('')
+#7 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('dropbox')
+#8 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/dropbox
+---
