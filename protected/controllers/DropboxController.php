@@ -1,6 +1,4 @@
 <?php
-DEFINE('consumerKey', 'itvelkigj22p5rw');
-DEFINE('consumerSecret', 'q75ilu33vozx423');
 
 class DropboxController extends Controller {
 
