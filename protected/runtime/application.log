@@ -841,3 +841,217 @@ Stack trace:
 REQUEST_URI=/ProyectoDesarrollo/index.php/dropbox
 in C:\wamp\www\ProyectoDesarrollo\protected\controllers\DropboxController.php (2)
 in C:\wamp\www\ProyectoDesarrollo\index.php (13)
+2012/10/25 22:36:32 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\ProyectoDesarrollo\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\wamp\www\ProyectoDesarrollo\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(283): CController->run('admin')
+#8 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(142): CWebApplication->runController('libreta/admin')
+#9 C:\wamp\www\ProyectoDesarrollo\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\ProyectoDesarrollo\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ProyectoDesarrollo/index.php/libreta/admin
+HTTP_REFERER=http://localhost/ProyectoDesarrollo/index.php/libreta
+---
+2012/10/25 22:56:42 [error] [exception.CException] exception 'CException' with message 'Alias "application.ext.data.EBackButtonWidget" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\wamp\www\ProyectoDesarrollo\framework\YiiBase.php:318
+Stack trace:
+#0 C:\wamp\www\ProyectoDesarrollo\framework\web\CWidgetFactory.php(147): YiiBase::import('application.ext...', true)
+#1 C:\wamp\www\ProyectoDesarrollo\framework\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(UsuarioController), 'application.ext...', Array)
+#2 C:\wamp\www\ProyectoDesarrollo\framework\web\CBaseController.php(173): CBaseController->createWidget('application.ext...', Array)
+#3 C:\wamp\www\ProyectoDesarrollo\protected\views\layouts\column2.php(18): CBaseController->widget('application.ext...')
+#4 C:\wamp\www\ProyectoDesarrollo\framework\web\CBaseController.php(127): require('C:\wamp\www\Pro...')
+#5 C:\wamp\www\ProyectoDesarrollo\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\Pro...', Array, true)
+#6 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(785): CBaseController->renderFile('C:\wamp\www\Pro...', Array, true)
+#7 C:\wamp\www\ProyectoDesarrollo\protected\controllers\UsuarioController.php(166): CController->render('index', Array)
+#8 C:\wamp\www\ProyectoDesarrollo\framework\web\actions\CInlineAction.php(50): UsuarioController->actionIndex()
+#9 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(292): CFilterChain->run()
+#16 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(283): CController->run('')
+#18 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(142): CWebApplication->runController('usuario')
+#19 C:\wamp\www\ProyectoDesarrollo\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 C:\wamp\www\ProyectoDesarrollo\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/ProyectoDesarrollo/index.php/usuario
+---
+2012/10/25 23:00:54 [error] [exception.CException] exception 'CException' with message 'Alias "protected.ext.Widget.EBackButtonWidget" es inválido. Verifique que el mismo apunta a un directorio o archivo exisitente.' in C:\wamp\www\ProyectoDesarrollo\framework\YiiBase.php:343
+Stack trace:
+#0 C:\wamp\www\ProyectoDesarrollo\framework\web\CWidgetFactory.php(147): YiiBase::import('protected.ext.W...', true)
+#1 C:\wamp\www\ProyectoDesarrollo\framework\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(UsuarioController), 'protected.ext.W...', Array)
+#2 C:\wamp\www\ProyectoDesarrollo\framework\web\CBaseController.php(173): CBaseController->createWidget('protected.ext.W...', Array)
+#3 C:\wamp\www\ProyectoDesarrollo\protected\views\layouts\column2.php(18): CBaseController->widget('protected.ext.W...')
+#4 C:\wamp\www\ProyectoDesarrollo\framework\web\CBaseController.php(127): require('C:\wamp\www\Pro...')
+#5 C:\wamp\www\ProyectoDesarrollo\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\Pro...', Array, true)
+#6 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(785): CBaseController->renderFile('C:\wamp\www\Pro...', Array, true)
+#7 C:\wamp\www\ProyectoDesarrollo\protected\controllers\UsuarioController.php(166): CController->render('index', Array)
+#8 C:\wamp\www\ProyectoDesarrollo\framework\web\actions\CInlineAction.php(50): UsuarioController->actionIndex()
+#9 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(292): CFilterChain->run()
+#16 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(283): CController->run('')
+#18 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(142): CWebApplication->runController('usuario')
+#19 C:\wamp\www\ProyectoDesarrollo\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 C:\wamp\www\ProyectoDesarrollo\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/ProyectoDesarrollo/index.php/usuario
+---
+2012/10/25 23:12:23 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `libreta` (`id_libreta`, `id_usuario`, `nombre`, `fecha`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\wamp\www\ProyectoDesarrollo\protected\controllers\LibretaController.php (73)
+in C:\wamp\www\ProyectoDesarrollo\index.php (13)
+2012/10/25 23:12:23 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `libreta` (`id_libreta`, `id_usuario`, `nombre`, `fecha`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\wamp\www\ProyectoDesarrollo\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\ProyectoDesarrollo\framework\db\ar\CActiveRecord.php(1017): CDbCommand->execute()
+#1 C:\wamp\www\ProyectoDesarrollo\framework\db\ar\CActiveRecord.php(796): CActiveRecord->insert(NULL)
+#2 C:\wamp\www\ProyectoDesarrollo\protected\controllers\LibretaController.php(73): CActiveRecord->save()
+#3 C:\wamp\www\ProyectoDesarrollo\framework\web\actions\CInlineAction.php(50): LibretaController->actionCreate()
+#4 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(283): CController->run('create')
+#13 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(142): CWebApplication->runController('libreta/create')
+#14 C:\wamp\www\ProyectoDesarrollo\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\ProyectoDesarrollo\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/ProyectoDesarrollo/index.php/libreta/create
+HTTP_REFERER=http://localhost/ProyectoDesarrollo/index.php/libreta/create
+---
+2012/10/25 23:26:38 [error] [php] Missing argument 2 for CActiveForm::textField(), called in C:\wamp\www\ProyectoDesarrollo\protected\views\libreta\_form.php on line 20 and defined (C:\wamp\www\ProyectoDesarrollo\framework\web\widgets\CActiveForm.php:656)
+Stack trace:
+#0 C:\wamp\www\ProyectoDesarrollo\framework\web\CBaseController.php(96): LibretaController->renderInternal()
+#1 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(870): LibretaController->renderFile()
+#2 C:\wamp\www\ProyectoDesarrollo\protected\views\libreta\create.php(18): LibretaController->renderPartial()
+#3 C:\wamp\www\ProyectoDesarrollo\framework\web\CBaseController.php(127): require()
+#4 C:\wamp\www\ProyectoDesarrollo\framework\web\CBaseController.php(96): LibretaController->renderInternal()
+#5 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(870): LibretaController->renderFile()
+#6 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(783): LibretaController->renderPartial()
+#7 C:\wamp\www\ProyectoDesarrollo\protected\controllers\LibretaController.php(79): LibretaController->render()
+#8 C:\wamp\www\ProyectoDesarrollo\framework\web\actions\CInlineAction.php(50): LibretaController->actionCreate()
+#9 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(309): CInlineAction->runWithParams()
+#10 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CFilterChain.php(134): LibretaController->runAction()
+#11 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#13 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CInlineFilter.php(59): LibretaController->filterAccessControl()
+#14 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#15 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(292): CFilterChain->run()
+#16 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(266): LibretaController->runActionWithFilters()
+#17 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(283): LibretaController->run()
+#18 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#19 C:\wamp\www\ProyectoDesarrollo\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 C:\wamp\www\ProyectoDesarrollo\index.php(13): CWebApplication->run()
+REQUEST_URI=/ProyectoDesarrollo/index.php/libreta/create
+in C:\wamp\www\ProyectoDesarrollo\protected\views\libreta\_form.php (20)
+in C:\wamp\www\ProyectoDesarrollo\protected\views\libreta\create.php (18)
+in C:\wamp\www\ProyectoDesarrollo\protected\controllers\LibretaController.php (79)
+2012/10/25 23:27:35 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\ProyectoDesarrollo\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\wamp\www\ProyectoDesarrollo\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(283): CController->run('admin')
+#8 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(142): CWebApplication->runController('usuario/admin')
+#9 C:\wamp\www\ProyectoDesarrollo\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\ProyectoDesarrollo\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ProyectoDesarrollo/index.php/usuario/admin
+HTTP_REFERER=http://localhost/ProyectoDesarrollo/index.php/usuario
+---
+2012/10/25 23:27:44 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\ProyectoDesarrollo\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\wamp\www\ProyectoDesarrollo\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(283): CController->run('admin')
+#8 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(142): CWebApplication->runController('usuario/admin')
+#9 C:\wamp\www\ProyectoDesarrollo\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\ProyectoDesarrollo\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ProyectoDesarrollo/index.php/usuario/admin
+HTTP_REFERER=http://localhost/ProyectoDesarrollo/index.php/usuario/create
+---
+2012/10/25 23:28:00 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\ProyectoDesarrollo\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\wamp\www\ProyectoDesarrollo\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(283): CController->run('admin')
+#8 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(142): CWebApplication->runController('usuario/admin')
+#9 C:\wamp\www\ProyectoDesarrollo\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\ProyectoDesarrollo\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ProyectoDesarrollo/index.php/usuario/admin
+HTTP_REFERER=http://localhost/ProyectoDesarrollo/index.php/usuario/index
+---
+2012/10/25 23:29:49 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\ProyectoDesarrollo\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\wamp\www\ProyectoDesarrollo\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(283): CController->run('admin')
+#8 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(142): CWebApplication->runController('usuario/admin')
+#9 C:\wamp\www\ProyectoDesarrollo\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\ProyectoDesarrollo\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ProyectoDesarrollo/index.php/usuario/admin
+HTTP_REFERER=http://localhost/ProyectoDesarrollo/index.php/usuario
+---
+2012/10/25 23:31:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "llibreta"' in C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(142): CWebApplication->runController('llibreta')
+#1 C:\wamp\www\ProyectoDesarrollo\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\ProyectoDesarrollo\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ProyectoDesarrollo/index.php/llibreta
+---
+2012/10/25 23:32:15 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\ProyectoDesarrollo\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\wamp\www\ProyectoDesarrollo\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\ProyectoDesarrollo\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(283): CController->run('admin')
+#8 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(142): CWebApplication->runController('libreta/admin')
+#9 C:\wamp\www\ProyectoDesarrollo\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\ProyectoDesarrollo\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ProyectoDesarrollo/index.php/libreta/admin
+HTTP_REFERER=http://localhost/ProyectoDesarrollo/index.php/libreta/create
+---
