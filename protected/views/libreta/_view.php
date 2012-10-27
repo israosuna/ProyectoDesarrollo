@@ -1,8 +1,3 @@
-<?php
-/* @var $this LibretaController */
-/* @var $data Libreta */
-?>
-
 <div class="view">
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('id_libreta')); ?>:</b>

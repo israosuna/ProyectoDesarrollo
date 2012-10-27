@@ -1,7 +1,4 @@
 <?php
-/* @var $this LibretaController */
-/* @var $model Libreta */
-
 $this->breadcrumbs=array(
 	'Libretas'=>array('index'),
 	$model->id_libreta,

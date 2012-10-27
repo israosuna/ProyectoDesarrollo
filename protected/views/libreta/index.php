@@ -1,7 +1,4 @@
 <?php
-/* @var $this LibretaController */
-/* @var $dataProvider CActiveDataProvider */
-
 $this->breadcrumbs=array(
 	'Libretas',
 );

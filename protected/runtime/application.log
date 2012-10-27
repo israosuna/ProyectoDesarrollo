@@ -1055,3 +1055,102 @@ Stack trace:
 REQUEST_URI=/ProyectoDesarrollo/index.php/libreta/admin
 HTTP_REFERER=http://localhost/ProyectoDesarrollo/index.php/libreta/create
 ---
+2012/10/27 21:17:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "<" solicitada.' in C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(271): CController->missingAction('<')
+#1 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(283): CController->run('<')
+#2 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(142): CWebApplication->runController('site/<')
+#3 C:\wamp\www\ProyectoDesarrollo\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\ProyectoDesarrollo\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ProyectoDesarrollo/site/%3C?=Yii::app()-%3EbaseUrl?%3E/images/blue-notebook.png
+HTTP_REFERER=http://localhost/ProyectoDesarrollo/site/index
+---
+2012/10/27 21:17:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "<" solicitada.' in C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(271): CController->missingAction('<')
+#1 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(283): CController->run('<')
+#2 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(142): CWebApplication->runController('site/<')
+#3 C:\wamp\www\ProyectoDesarrollo\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\ProyectoDesarrollo\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ProyectoDesarrollo/site/%3C?=Yii::app()-%3EbaseUrl?%3E/images/blue-document.png
+HTTP_REFERER=http://localhost/ProyectoDesarrollo/site/index
+---
+2012/10/27 21:17:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "<" solicitada.' in C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(271): CController->missingAction('<')
+#1 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(283): CController->run('<')
+#2 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(142): CWebApplication->runController('site/<')
+#3 C:\wamp\www\ProyectoDesarrollo\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\ProyectoDesarrollo\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ProyectoDesarrollo/site/%3C?=Yii::app()-%3EbaseUrl?%3E/images/note.png
+HTTP_REFERER=http://localhost/ProyectoDesarrollo/site/index
+---
+2012/10/27 21:17:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "<" solicitada.' in C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(271): CController->missingAction('<')
+#1 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(283): CController->run('<')
+#2 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(142): CWebApplication->runController('site/<')
+#3 C:\wamp\www\ProyectoDesarrollo\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\ProyectoDesarrollo\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ProyectoDesarrollo/site/%3C?=Yii::app()-%3EbaseUrl?%3E/images/evernote.png
+HTTP_REFERER=http://localhost/ProyectoDesarrollo/site/index
+---
+2012/10/27 21:18:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "<" solicitada.' in C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(271): CController->missingAction('<')
+#1 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(283): CController->run('<')
+#2 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(142): CWebApplication->runController('site/<')
+#3 C:\wamp\www\ProyectoDesarrollo\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\ProyectoDesarrollo\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ProyectoDesarrollo/site/%3C?=Yii::app()-%3EbaseUrl?%3E/libreta/create
+HTTP_REFERER=http://localhost/ProyectoDesarrollo/site/index
+---
+2012/10/27 21:18:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "<" solicitada.' in C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(271): CController->missingAction('<')
+#1 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(283): CController->run('<')
+#2 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(142): CWebApplication->runController('site/<')
+#3 C:\wamp\www\ProyectoDesarrollo\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\ProyectoDesarrollo\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ProyectoDesarrollo/site/%3C?=Yii::app()-%3EbaseUrl?%3E/images/evernote.png
+HTTP_REFERER=http://localhost/ProyectoDesarrollo/site/index
+---
+2012/10/27 21:18:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "<" solicitada.' in C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(271): CController->missingAction('<')
+#1 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(283): CController->run('<')
+#2 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(142): CWebApplication->runController('site/<')
+#3 C:\wamp\www\ProyectoDesarrollo\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\ProyectoDesarrollo\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ProyectoDesarrollo/site/%3C?=Yii::app()-%3EbaseUrl?%3E/images/blue-document.png
+HTTP_REFERER=http://localhost/ProyectoDesarrollo/site/index
+---
+2012/10/27 21:18:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "<" solicitada.' in C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(271): CController->missingAction('<')
+#1 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(283): CController->run('<')
+#2 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(142): CWebApplication->runController('site/<')
+#3 C:\wamp\www\ProyectoDesarrollo\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\ProyectoDesarrollo\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ProyectoDesarrollo/site/%3C?=Yii::app()-%3EbaseUrl?%3E/images/blue-notebook.png
+HTTP_REFERER=http://localhost/ProyectoDesarrollo/site/index
+---
+2012/10/27 21:18:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "<" solicitada.' in C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\ProyectoDesarrollo\framework\web\CController.php(271): CController->missingAction('<')
+#1 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(283): CController->run('<')
+#2 C:\wamp\www\ProyectoDesarrollo\framework\web\CWebApplication.php(142): CWebApplication->runController('site/<')
+#3 C:\wamp\www\ProyectoDesarrollo\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\ProyectoDesarrollo\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ProyectoDesarrollo/site/%3C?=Yii::app()-%3EbaseUrl?%3E/images/note.png
+HTTP_REFERER=http://localhost/ProyectoDesarrollo/site/index
+---

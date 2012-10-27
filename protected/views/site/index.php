@@ -7,8 +7,8 @@ $this->pageTitle=Yii::app()->name;
     <tr>
         <td>
             <center>
-            <a class="botones" href="<?=Yii::app()->baseUrl?>/libreta">
-                <img  src="<?=Yii::app()->baseUrl?>/images/blue-notebook.png"/>
+            <a class="botones" href="<?php echo Yii::app()->baseUrl?>/libreta">
+                <img  src="<?php echo Yii::app()->baseUrl?>/images/blue-notebook.png"/>
             </a>
             <span>
                 Ver Libretas
@@ -18,8 +18,8 @@ $this->pageTitle=Yii::app()->name;
 
         <td>
             <center>
-            <a class="botones"  href="<?=Yii::app()->baseUrl?>/nota">
-                <img  src="<?=Yii::app()->baseUrl?>/images/note.png"/>
+            <a class="botones"  href="<?php echo Yii::app()->baseUrl?>/nota">
+                <img  src="<?php echo Yii::app()->baseUrl?>/images/note.png"/>
                 
             </a>
             
@@ -32,8 +32,8 @@ $this->pageTitle=Yii::app()->name;
     <tr>
         <td>
             <center>
-            <a class="botones" href="<?=Yii::app()->baseUrl?>/libreta/create">
-                <img  src="<?=Yii::app()->baseUrl?>/images/evernote.png"/>
+            <a class="botones" href="<?php echo Yii::app()->baseUrl?>/libreta/create">
+                <img  src="<?php echo Yii::app()->baseUrl?>/images/evernote.png"/>
             </a>
             <span>
                 Agregar Libreta
@@ -43,8 +43,8 @@ $this->pageTitle=Yii::app()->name;
 
         <td>
             <center>
-            <a class="botones" href="<?=Yii::app()->baseUrl?>/nota/create">
-                <img  src="<?=Yii::app()->baseUrl?>/images/blue-document.png"/>
+            <a class="botones" href="<?php echo Yii::app()->baseUrl?>/nota/create">
+                <img  src="<?php echo Yii::app()->baseUrl?>/images/blue-document.png"/>
                 
             </a>
             
