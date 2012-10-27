@@ -16,6 +16,34 @@
 class Libreta extends CActiveRecord
 {
 	/**
+         * Regresa un arreglo  con las libretas que tiene el usuario disponible
+         */
+    
+        public function getArray($find=''){
+            
+            $libretas;
+            
+            if ($find) {
+            
+                $libretas=self::model()->findAll($find);
+                
+            }
+            else{
+                
+                $libretas=  self::model()->findAll();
+            }
+            $ret= array();
+            foreach ($libretas as $libreta){
+                
+                $ret[$libreta->id_libreta]=$libreta->nombre;
+                
+                
+            }
+        
+            return $ret;
+        }
+
+        /**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
 	 * @return Libreta the static model class
@@ -41,7 +69,7 @@ class Libreta extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_libreta, id_usuario', 'required'),
+			array('id_usuario', 'required'),
 			array('id_libreta, id_usuario', 'numerical', 'integerOnly'=>true),
 			array('nombre', 'length', 'max'=>30),
 			array('fecha', 'safe'),

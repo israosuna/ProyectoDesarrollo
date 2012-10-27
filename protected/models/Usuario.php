@@ -21,7 +21,38 @@ class Usuario extends CActiveRecord
 	public $verifyCode;
 	public $clave2;
 	
-    /**
+   
+        /**
+         *Metodo que permite obtener la lista de usuario, que trae el id del usuario
+         * como el KeyValue  
+         */
+        
+        public function getArray($find=''){
+            
+            $users;
+            
+            if ($find) {
+            
+                $users=self::model()->findAll($find);
+                
+            }
+            else{
+                
+                $users=  self::model()->findAll();
+            }
+            $ret= array();
+            foreach ($users as $user){
+                
+                $ret[$user->id_usuario]=$user->nombre.' '.$user->apellido;
+                
+                
+            }
+        
+            return $ret;
+        }
+
+
+        /**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
 	 * @return Usuario the static model class

@@ -114,7 +114,7 @@ class SiteController extends Controller {
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('index','contact','about','logout','captcha','usuario','page','libreta','nota','dropbox'),
+				'actions'=>array('coco','index','contact','about','logout','captcha','usuario','page','libreta','nota','dropbox'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
