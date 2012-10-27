@@ -1,0 +1,38 @@
+/* 
+    Document   : proyecto
+    Created on : Oct 27, 2012, 1:19:41 PM
+    Author     : israelosuna
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+table.menu{
+    
+    width: 500px;
+    left: -150px;
+    height: 200px;
+    
+}
+
+a.botones img{
+    
+    width: 150px;
+    height: 150px;
+    
+}
+
+a.botones img:hover{
+    
+    width: 170px;
+    height: 170px;
+}
+
+a.botones {
+    
+    width: 180px;
+    height: 180px;
+    padding-left: 20px;
+    padding-right: 40px;
+    display: block;
+    padding-top: 15px;
+}

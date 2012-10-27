@@ -16,34 +16,19 @@ class DropboxController extends Controller {
             $dropbox = new Dropbox_API($oauth);
             $account = $dropbox->getAccountInfo();
 
-            $info = $dropbox->getMetaData('/');
+           // $info = $dropbox->getMetaData('/');
         } catch (Exception $e) {
             $error = "error: " . $e->getMessage();
             //echo $error;
-            $this->redirect('dropbox/Authorize');
+            $this->redirect('Dropbox/Authorize');
+            
         }
 
         spl_autoload_register(array('YiiBase', 'autoload'));
+        //$this->redirect('index');
+        Yii::app()->request->redirect(Yii::app()->baseUrl.'/site/index');
 
-        echo "NOMBRE: " . $account['display_name'] . "<br/>";
-        echo "EMAIL: " . $account['email'] . "<br/>";
-        echo "PAIS: " . $account['country'] . "<br/>";
-        echo " <br/>";
-
-        echo "......LIST..... <br/>";
-
-        foreach ($info['contents'] as $file) {
-            $filename= basename($file['path']);
-            $fileesize= $file['size'];
-            $fullfilesize= $file['path'];
-           // $dropbox->getThumbnail($file['path'],'small','dropbox');
-
-            echo " - ARCHIVO: " . $file['path'];
-            echo " - ES CARPETA: " . (($file['is_dir']) ? 'SI' : 'NO');
-            echo " - TAMAÑO: " . $file['size'];
-            echo " <br/>";
-        }
-                
+        
     }
 
     public function actionAuthorize() {

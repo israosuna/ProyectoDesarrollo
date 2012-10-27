@@ -30,6 +30,27 @@ class SiteController extends Controller {
     public function actionIndex() {
         // renders the view file 'protected/views/site/index.php'
         // using the default layout 'protected/views/layouts/main.php'
+       $tokens = Yii::app()->user->getState('tokens');
+
+        spl_autoload_unregister(array('YiiBase', 'autoload'));
+        $dropbox = Yii::getPathOfAlias('ext.dropbox');
+        include ( $dropbox . DIRECTORY_SEPARATOR . 'autoload.php');
+        try {
+            $oauth = new Dropbox_OAuth_Curl(consumerKey, consumerSecret);
+            $oauth->setToken($tokens);
+
+            $dropbox = new Dropbox_API($oauth);
+            $account = $dropbox->getAccountInfo();
+
+            //$info = $dropbox->getMetaData('/');
+        } catch (Exception $e) {
+            $error = "error: " . $e->getMessage();
+            //echo $error;
+            $this->redirect('Dropbox/Authorize');
+            
+        }
+
+        spl_autoload_register(array('YiiBase', 'autoload'));
         $this->render('index');
     }
 
