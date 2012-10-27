@@ -26,17 +26,33 @@ class NotaController extends Controller
 	/**
 	 * Reglas de Control de datos.
 	 * este metodo es usado por el filtro 'accessControl' .
+        */
+        public function actions() {
+            return array(
+                
+                'coco' => array(
+                    'class' => 'CocoAction',
+                ),
+            );
+        }
+	
+        
+        
+        /**
+	 * Specifies the access control rules.
+	 * This method is used by the 'accessControl' filter.
 	 * @return array access control rules
 	 */
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // permite acciones enindex y view
-				'actions'=>array('index','view'),
+
+			array('allow',  // allow all users to perform 'index' and 'view' actions
+				'actions'=>array('login'),
 				'users'=>array('*'),
 			),
-			array('allow', // permite a los usuarios autorizados la creacion y modificiacion 
-				'actions'=>array('create','update'),
+			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+				'actions'=>array('create','update','index','view','coco'),
 				'users'=>array('@'),
 			),
 			array('allow', // permite acciones admin y borrar
@@ -74,7 +90,7 @@ class NotaController extends Controller
 		{
 			$model->attributes=$_POST['Nota'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id_nota));
+				$this->redirect(array('update','id'=>$model->id_nota));
 		}
 
 		$this->render('create',array(

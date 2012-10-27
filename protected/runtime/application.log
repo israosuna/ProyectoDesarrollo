@@ -1154,3 +1154,105 @@ Stack trace:
 REQUEST_URI=/ProyectoDesarrollo/site/%3C?=Yii::app()-%3EbaseUrl?%3E/images/note.png
 HTTP_REFERER=http://localhost/ProyectoDesarrollo/site/index
 ---
+2012/10/27 23:01:49 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/auth/CAccessControlFilter.php:170
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/auth/CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(292): CFilterChain->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(266): CController->runActionWithFilters(Object(CocoAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(283): CController->run('coco')
+#8 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('site/coco')
+#9 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/site/coco?&action=upload&nocache=1351378904083&data=a:6:{s:17:%22allowedExtensions%22;a:4:{i:0;s:4:%22jpeg%22;i:1;s:3:%22jpg%22;i:2;s:3:%22gif%22;i:3;s:3:%22png%22;}s:9:%22sizeLimit%22;i:2000000;s:9:%22uploadDir%22;s:19:%22ProyectoDesarrollo/%22;s:17:%22receptorClassName%22;s:33:%22application.models.ArchivoAdjunto%22;s:10:%22methodName%22;s:12:%22subirArchivo%22;s:8:%22userdata%22;s:4:%22hola%22;}&qqfile=Untitled.png
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/site/contact
+---
+2012/10/27 23:01:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/auth/CAccessControlFilter.php:170
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/auth/CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(292): CFilterChain->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(266): CController->runActionWithFilters(Object(CocoAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(283): CController->run('coco')
+#8 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('site/coco')
+#9 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/site/coco?&action=upload&nocache=1351378904083&data=a:6:{s:17:%22allowedExtensions%22;a:4:{i:0;s:4:%22jpeg%22;i:1;s:3:%22jpg%22;i:2;s:3:%22gif%22;i:3;s:3:%22png%22;}s:9:%22sizeLimit%22;i:2000000;s:9:%22uploadDir%22;s:19:%22ProyectoDesarrollo/%22;s:17:%22receptorClassName%22;s:33:%22application.models.ArchivoAdjunto%22;s:10:%22methodName%22;s:12:%22subirArchivo%22;s:8:%22userdata%22;s:4:%22hola%22;}&qqfile=UniverityID+copy.png
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/site/contact
+---
+2012/10/27 23:02:16 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/auth/CAccessControlFilter.php:170
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/auth/CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(292): CFilterChain->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(266): CController->runActionWithFilters(Object(CocoAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(283): CController->run('coco')
+#8 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('site/coco')
+#9 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/site/coco?&action=upload&nocache=1351378904083&data=a:6:{s:17:%22allowedExtensions%22;a:4:{i:0;s:4:%22jpeg%22;i:1;s:3:%22jpg%22;i:2;s:3:%22gif%22;i:3;s:3:%22png%22;}s:9:%22sizeLimit%22;i:2000000;s:9:%22uploadDir%22;s:19:%22ProyectoDesarrollo/%22;s:17:%22receptorClassName%22;s:33:%22application.models.ArchivoAdjunto%22;s:10:%22methodName%22;s:12:%22subirArchivo%22;s:8:%22userdata%22;s:4:%22hola%22;}&qqfile=android-1.png
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/site/contact
+---
+2012/10/27 23:02:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/auth/CAccessControlFilter.php:170
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/auth/CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(292): CFilterChain->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(266): CController->runActionWithFilters(Object(CocoAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(283): CController->run('coco')
+#8 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('site/coco')
+#9 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/site/coco?&action=upload&nocache=1351378956280&data=a:6:{s:17:%22allowedExtensions%22;a:4:{i:0;s:4:%22jpeg%22;i:1;s:3:%22jpg%22;i:2;s:3:%22gif%22;i:3;s:3:%22png%22;}s:9:%22sizeLimit%22;i:2000000;s:9:%22uploadDir%22;s:19:%22ProyectoDesarrollo/%22;s:17:%22receptorClassName%22;s:33:%22application.models.ArchivoAdjunto%22;s:10:%22methodName%22;s:12:%22subirArchivo%22;s:8:%22userdata%22;s:4:%22hola%22;}&qqfile=android-1.png
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/site/contact
+---
+2012/10/27 23:05:13 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/auth/CAccessControlFilter.php:170
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/auth/CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(292): CFilterChain->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(266): CController->runActionWithFilters(Object(CocoAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(283): CController->run('coco')
+#8 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('site/coco')
+#9 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/site/coco?&action=upload&nocache=1351378956280&data=a:6:{s:17:%22allowedExtensions%22;a:4:{i:0;s:4:%22jpeg%22;i:1;s:3:%22jpg%22;i:2;s:3:%22gif%22;i:3;s:3:%22png%22;}s:9:%22sizeLimit%22;i:2000000;s:9:%22uploadDir%22;s:19:%22ProyectoDesarrollo/%22;s:17:%22receptorClassName%22;s:33:%22application.models.ArchivoAdjunto%22;s:10:%22methodName%22;s:12:%22subirArchivo%22;s:8:%22userdata%22;s:4:%22hola%22;}&qqfile=android-1.png
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/site/contact
+---
+2012/10/27 23:06:24 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/auth/CAccessControlFilter.php:170
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/auth/CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(292): CFilterChain->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(266): CController->runActionWithFilters(Object(CocoAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(283): CController->run('coco')
+#8 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('site/coco')
+#9 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/site/coco?&action=upload&nocache=1351378956280&data=a:6:{s:17:%22allowedExtensions%22;a:4:{i:0;s:4:%22jpeg%22;i:1;s:3:%22jpg%22;i:2;s:3:%22gif%22;i:3;s:3:%22png%22;}s:9:%22sizeLimit%22;i:2000000;s:9:%22uploadDir%22;s:19:%22ProyectoDesarrollo/%22;s:17:%22receptorClassName%22;s:33:%22application.models.ArchivoAdjunto%22;s:10:%22methodName%22;s:12:%22subirArchivo%22;s:8:%22userdata%22;s:4:%22hola%22;}&qqfile=Android-2.png
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/site/contact
+---

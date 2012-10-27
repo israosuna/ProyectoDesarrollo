@@ -10,8 +10,7 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'id_usuario'); ?>
-		<?php echo $form->textField($model,'id_usuario'); ?>
+		<?php echo $form->hiddenField($model,'id_usuario',array ('value'=> Yii::app()->user->id_usuario)); ?>
 		<?php echo $form->error($model,'id_usuario'); ?>
 	</div>
 
@@ -22,8 +21,10 @@
 	</div>
 
 	<div class="row">
+                <?php $fecha = date( 'Y-m-d H:i:s' );?>
 		<?php echo $form->labelEx($model,'fecha'); ?>
-		<?php echo $form->textField($model,'fecha'); ?>
+                <?php echo $fecha; ?>
+		<?php echo $form->hiddenfield($model,'fecha',  array('value'=>$fecha)); ?>
 		<?php echo $form->error($model,'fecha'); ?>
 	</div>
 

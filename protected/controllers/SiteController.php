@@ -110,8 +110,10 @@ class SiteController extends Controller {
 				'actions'=>array('login'),
 				'users'=>array('*'),
 			),
+
 			array('allow', // permite la navegacion en la pagina.
-				'actions'=>array('index','contact','about','logout','captcha','usuario','page','libreta','nota','dropbox'),
+				'actions'=>array('coco','index','contact','about','logout','captcha','usuario','page','libreta','nota','dropbox'),
+
 				'users'=>array('@'),
 			),
 			array('allow', // permite al usuario las acciones de borrar.

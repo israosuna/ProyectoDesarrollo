@@ -52,9 +52,8 @@ class ArchivoAdjunto extends CActiveRecord
                 $dropbox->putFile($filepath,$filepath);
                 
 
-        //   $account = $dropbox->getAccountInfo();
 
-        //    $info = $dropbox->getMetaData('/');
+            $info = $dropbox->getMetaData('/');
         } catch (Exception $e) {
             $error = "error: " . $e->getMessage();
             echo $error;
@@ -63,7 +62,17 @@ class ArchivoAdjunto extends CActiveRecord
 
         spl_autoload_register(array('YiiBase', 'autoload'));
         unlink($filepath);
-        //echo $filepath;    
+        // Guardado de la ruta del archivo en la base de datos.
+        $archivoAdjunto= new ArchivoAdjunto();
+        $archivoAdjunto->ruta_archivo= $filepath;
+        $archivoAdjunto->extension= substr($filepath,  stripos($filepath,'.'));
+        $archivoAdjunto->nombre_archivo= substr($filepath, stripos($filepath,'/'));
+        $archivoAdjunto->save();
+        
+        // Aqui guardo en la tabla M-N.
+        
+        
+               
          }
         
         
