@@ -24,22 +24,24 @@ class UsuarioController extends Controller
 	 * This method is used by the 'accessControl' filter.
 	 * @return array access control rules
 	 */
+        
+        //Funcion que va a definir la permisologia de cada usuario en el sistema
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
+			array('allow',  // permite al usuario no registrado hacer acciones de 'index', 'view' y hacer uso del 'captcha'
 				'actions'=>array('index','view','registrar','captcha'),
 				'users'=>array('*'),
 			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+			array('allow', // permite a usuarios autenticados el uso de 'create', 'update' y 'usuario'
 				'actions'=>array('create','update','usuario'),
 				'users'=>array('@'),
 			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+			array('allow', // permite al usuario acciones de 'admin' y 'delete'
 				'actions'=>array('admin','delete'),
 				'users'=>array('admin'),
 			),
-			array('deny',  // deny all users
+			array('deny',  // si no esta en el sistema no permite realizar ninguna accion
 				'users'=>array('*'),
 			),
 		);
@@ -49,7 +51,7 @@ class UsuarioController extends Controller
         public function actions()
 	{
 		return array(
-			// captcha action renders the CAPTCHA image displayed on the contact page
+			// accion que renderiza el captcha para ser mostrado en la pagina de registro
 			'captcha'=>array(
 				'class'=>'CCaptchaAction',
 				'backColor'=>0xFFFFFF,
@@ -61,8 +63,8 @@ class UsuarioController extends Controller
         
         
         /**
-	 * Displays a particular model.
-	 * @param integer $id the ID of the model to be displayed
+	 * Hace el display del modelo 
+	 * @param integer $id id del modelo que va a ser mostrado
 	 */
 	public function actionView($id)
 	{
@@ -72,14 +74,14 @@ class UsuarioController extends Controller
 	}
 
 	/**
-	 * Creates a new model.
-	 * If creation is successful, the browser will be redirected to the 'view' page.
+	 * Crea un nuevo modelo para usuario.
+	 * si la creacion es exitosa, el browser redirije hacia view.
 	 */
 	public function actionCreate()
 	{
 		$model=new Usuario;
 
-		// Uncomment the following line if AJAX validation is needed
+		// realiza las validaciones de ajax
 		 $this->performAjaxValidation($model);
 
 		if(isset($_POST['Usuario']))
@@ -99,7 +101,7 @@ class UsuarioController extends Controller
 	{
 		$model=new Usuario;
 
-		// Uncomment the following line if AJAX validation is needed
+		// realiza las validaciones de ajax
 		 $this->performAjaxValidation($model);
 
 		if(isset($_POST['Usuario']))
@@ -118,9 +120,9 @@ class UsuarioController extends Controller
         
         
 	/**
-	 * Updates a particular model.
-	 * If update is successful, the browser will be redirected to the 'view' page.
-	 * @param integer $id the ID of the model to be updated
+	 * Realiza el update de un modelo.
+	 * si la creacion es exitosa, el browser redirije hacia view.
+	 * @param integer $id id del modelo que va a ser actualizado
 	 */
 	public function actionUpdate($id)
 	{
@@ -142,9 +144,9 @@ class UsuarioController extends Controller
 	}
 
 	/**
-	 * Deletes a particular model.
-	 * If deletion is successful, the browser will be redirected to the 'admin' page.
-	 * @param integer $id the ID of the model to be deleted
+	 * Elimina un modelo en particular.
+         * si la creacion es exitosa, el browser redirije hacia la pagina de admin.
+	 * @param integer $id id del modelo que va a ser actualizado
 	 */
 	public function actionDelete($id)
 	{
@@ -156,7 +158,7 @@ class UsuarioController extends Controller
 	}
 
 	/**
-	 * Lists all models.
+	 * Lista todos los modelos.
 	 */
 	public function actionIndex()
 	{
@@ -167,7 +169,7 @@ class UsuarioController extends Controller
 	}
 
 	/**
-	 * Manages all models.
+	 * Administrar los modelos.
 	 */
 	public function actionAdmin()
 	{
@@ -182,9 +184,9 @@ class UsuarioController extends Controller
 	}
 
 	/**
-	 * Returns the data model based on the primary key given in the GET variable.
-	 * If the data model is not found, an HTTP exception will be raised.
-	 * @param integer the ID of the model to be loaded
+	 * Retorna el data model basado en la clave primaria obtenida por el get
+	 * si no se encuentra el modelo, se lanza una excepcion HTTP.
+	 * @param integer $id del modelo que se quiere traer
 	 */
 	public function loadModel($id)
 	{
@@ -195,8 +197,8 @@ class UsuarioController extends Controller
 	}
 
 	/**
-	 * Performs the AJAX validation.
-	 * @param CModel the model to be validated
+	 * Validaciones en Ajax.
+	 * @param CModel el modelo a ser validado
 	 */
 	protected function performAjaxValidation($model)
 	{
