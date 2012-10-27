@@ -7,13 +7,12 @@ class SiteController extends Controller {
      */
     public function actions() {
         return array(
-            // captcha action renders the CAPTCHA image displayed on the contact page
+            // validacion mediante CAPTCHA
             'captcha' => array(
                 'class' => 'CCaptchaAction',
                 'backColor' => 0xFFFFFF,
             ),
-            // page action renders "static" pages stored under 'protected/views/site/pages'
-            // They can be accessed via: index.php?r=site/page&view=FileName
+           
             'page' => array(
                 'class' => 'CViewAction',
             ),
@@ -24,12 +23,12 @@ class SiteController extends Controller {
     }
 
     /**
-     * This is the default 'index' action that is invoked
-     * when an action is not explicitly requested by users.
+     * 
+     * 
      */
     public function actionIndex() {
-        // renders the view file 'protected/views/site/index.php'
-        // using the default layout 'protected/views/layouts/main.php'
+        // renderiza el archivo view 'protected/views/site/index.php'
+        //  layout por defecto 'protected/views/layouts/main.php'
        $tokens = Yii::app()->user->getState('tokens');
 
         spl_autoload_unregister(array('YiiBase', 'autoload'));
@@ -42,10 +41,8 @@ class SiteController extends Controller {
             $dropbox = new Dropbox_API($oauth);
             $account = $dropbox->getAccountInfo();
 
-            //$info = $dropbox->getMetaData('/');
         } catch (Exception $e) {
             $error = "error: " . $e->getMessage();
-            //echo $error;
             $this->redirect('Dropbox/Authorize');
             
         }
@@ -55,7 +52,7 @@ class SiteController extends Controller {
     }
 
     /**
-     * This is the action to handle external exceptions.
+     * Manejo de excepciones.
      */
     public function actionError() {
         if ($error = Yii::app()->errorHandler->error) {
@@ -67,7 +64,7 @@ class SiteController extends Controller {
     }
 
     /**
-     * Displays the contact page
+     * Muestra la pagina de CONTACT
      */
     public function actionContact() {
         $model = new ContactForm;
@@ -96,8 +93,8 @@ class SiteController extends Controller {
     public function filters()
 	{
 		return array(
-			'accessControl', // perform access control for CRUD operations
-			'postOnly + delete', // we only allow deletion via POST request
+			'accessControl', // Control de Acceso para los CRUD
+			'postOnly + delete', // las acciones de borrar solo por POST
 		);
 	}
 
@@ -109,19 +106,19 @@ class SiteController extends Controller {
     public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
+			array('allow',  
 				'actions'=>array('login'),
 				'users'=>array('*'),
 			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+			array('allow', // permite la navegacion en la pagina.
 				'actions'=>array('index','contact','about','logout','captcha','usuario','page','libreta','nota','dropbox'),
 				'users'=>array('@'),
 			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+			array('allow', // permite al usuario las acciones de borrar.
 				'actions'=>array('admin','delete'),
 				'users'=>array('admin'),
 			),
-			array('deny',  // deny all users
+			array('deny',  // rechaza los usuarios
 				'users'=>array('*'),
 			),
 		);
@@ -129,30 +126,30 @@ class SiteController extends Controller {
     
     
     /**
-     * Displays the login page
+     * Muestra la Pagina de Login
      */
     public function actionLogin() {
         $model = new LoginForm;
 
-        // if it is ajax validation request
+        // if para la peticion de ajax 
         if (isset($_POST['ajax']) && $_POST['ajax'] === 'login-form') {
             echo CActiveForm::validate($model);
             Yii::app()->end();
         }
 
-        // collect user input data
+        // Recolecta los datos ingresados
         if (isset($_POST['LoginForm'])) {
             $model->attributes = $_POST['LoginForm'];
-            // validate user input and redirect to the previous page if valid
+            // valida los datos y redirecciona
             if ($model->validate() && $model->login())
                 $this->redirect(Yii::app()->user->returnUrl);
         }
-        // display the login form
+        // muestra el formulario de login
         $this->render('login', array('model' => $model));
     }
 
     /**
-     * Logs out the current user and redirect to homepage.
+     * Pagina para cerrar sesion y enviar al HomePage.
      */
     public function actionLogout() {
         Yii::app()->user->logout();

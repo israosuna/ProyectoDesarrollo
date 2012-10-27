@@ -19,38 +19,38 @@ class NotaController extends Controller
 	public function filters()
 	{
 		return array(
-			'accessControl', // perform access control for CRUD operations
+			'accessControl', // OPERACIONES CRUD
 		);
 	}
 
 	/**
-	 * Specifies the access control rules.
-	 * This method is used by the 'accessControl' filter.
+	 * Reglas de Control de datos.
+	 * este metodo es usado por el filtro 'accessControl' .
 	 * @return array access control rules
 	 */
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
+			array('allow',  // permite acciones enindex y view
 				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+			array('allow', // permite a los usuarios autorizados la creacion y modificiacion 
 				'actions'=>array('create','update'),
 				'users'=>array('@'),
 			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+			array('allow', // permite acciones admin y borrar
 				'actions'=>array('admin','delete'),
 				'users'=>array('admin'),
 			),
-			array('deny',  // deny all users
+			array('deny',  // rechaza todos los usarios
 				'users'=>array('*'),
 			),
 		);
 	}
 
 	/**
-	 * Displays a particular model.
+	 * Muestra un modelo en especifico
 	 */
 	public function actionView()
 	{
@@ -60,8 +60,8 @@ class NotaController extends Controller
 	}
 
 	/**
-	 * Creates a new model.
-	 * If creation is successful, the browser will be redirected to the 'view' page.
+	 * Creacion de Modelo.
+	 * si la creacion se hace se redirecciona al index.
 	 */
 	public function actionCreate()
 	{
@@ -83,8 +83,8 @@ class NotaController extends Controller
 	}
 
 	/**
-	 * Updates a particular model.
-	 * If update is successful, the browser will be redirected to the 'view' page.
+	 * Modifica el modelo.
+	 * redirecciona al index
 	 */
 	public function actionUpdate()
 	{
@@ -106,14 +106,14 @@ class NotaController extends Controller
 	}
 
 	/**
-	 * Deletes a particular model.
-	 * If deletion is successful, the browser will be redirected to the 'index' page.
-	 */
+	 * borra el modelo.
+	 * redirecciona al index
+         *  */
 	public function actionDelete()
 	{
 		if(Yii::app()->request->isPostRequest)
 		{
-			// we only allow deletion via POST request
+			// solo se permite via POST
 			$this->loadModel()->delete();
 
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
@@ -125,7 +125,7 @@ class NotaController extends Controller
 	}
 
 	/**
-	 * Lists all models.
+	 * Lista Los modelos.
 	 */
 	public function actionIndex()
 	{
@@ -136,12 +136,12 @@ class NotaController extends Controller
 	}
 
 	/**
-	 * Manages all models.
+	 * Maneja los modelos.
 	 */
 	public function actionAdmin()
 	{
 		$model=new Nota('search');
-		$model->unsetAttributes();  // clear any default values
+		$model->unsetAttributes();  // Borra los valores por defecto
 		if(isset($_GET['Nota']))
 			$model->attributes=$_GET['Nota'];
 
@@ -151,8 +151,8 @@ class NotaController extends Controller
 	}
 
 	/**
-	 * Returns the data model based on the primary key given in the GET variable.
-	 * If the data model is not found, an HTTP exception will be raised.
+	 * devuelve el modelo de datos de acuerdo al id que se recibe por via GET.
+	 * si no se encuentra se envia una excepcion HTTP.
 	 */
 	public function loadModel()
 	{
@@ -167,7 +167,7 @@ class NotaController extends Controller
 	}
 
 	/**
-	 * Performs the AJAX validation.
+	 * validaciones AJAX.
 	 * @param CModel the model to be validated
 	 */
 	protected function performAjaxValidation($model)
