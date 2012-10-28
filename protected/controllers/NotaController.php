@@ -23,16 +23,11 @@ class NotaController extends Controller
 		);
 	}
 
-<<<<<<< HEAD
 	/**
 	 * Reglas de Control de datos.
 	 * este metodo es usado por el filtro 'accessControl' .
         */
-=======
-   /**
-     * Declares class-based actions.
-     */
->>>>>>> master
+
         public function actions() {
             return array(
                 
