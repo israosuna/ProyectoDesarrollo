@@ -107,7 +107,7 @@ class SiteController extends Controller {
 	{
 		return array(
 			array('allow',  
-				'actions'=>array('login'),
+				'actions'=>array('login','error'),
 				'users'=>array('*'),
 			),
 

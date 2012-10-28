@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
+        
+                <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.4.2.js" ></script>
+<meta charset="utf-8">
         <!-- blueprint CSS framework -->
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print" />
@@ -18,7 +20,6 @@
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/proyecto.css" />
-        <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.4.2.js" ></script>
         <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/cufon-yui.js"></script>
         <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/cufon-replace.js"></script> 
         <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/Myriad_Pro_300.font.js"></script>
@@ -56,8 +57,7 @@
                     </div>
                     <div class="wrapper">
                         <article class="col1 pad_left2">
-                            <div class="text1">Discovering New Ways <span>of Scientific Thinking</span></div>
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis prae sentium voluptatum deleniti atque corrupti quos dolores et quas molestias excep turi sint occaecati cupiditate non provident. <a href="#" class="link1">Read More</a> </p>
+                            <div class="text1">Evernote+DropBox <span>Best App Ever</span></div>
                         </article>
                     </div>
                 </header>
