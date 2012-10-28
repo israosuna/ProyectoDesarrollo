@@ -71,6 +71,10 @@ class ArchivoAdjunto extends CActiveRecord
         
         // Aqui guardo en la tabla M-N.
         
+        $relacion = new nota_adjunto();
+        $relacion->id_nota= $userdata;
+        $relacion->id_adjunto= $archivoAdjunto->id_adjunto;
+        $relacion->save();
         
                
          }
