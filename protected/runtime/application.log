@@ -1256,3 +1256,23 @@ Stack trace:
 REQUEST_URI=/proyectoDesarrollo/index.php/site/coco?&action=upload&nocache=1351378956280&data=a:6:{s:17:%22allowedExtensions%22;a:4:{i:0;s:4:%22jpeg%22;i:1;s:3:%22jpg%22;i:2;s:3:%22gif%22;i:3;s:3:%22png%22;}s:9:%22sizeLimit%22;i:2000000;s:9:%22uploadDir%22;s:19:%22ProyectoDesarrollo/%22;s:17:%22receptorClassName%22;s:33:%22application.models.ArchivoAdjunto%22;s:10:%22methodName%22;s:12:%22subirArchivo%22;s:8:%22userdata%22;s:4:%22hola%22;}&qqfile=Android-2.png
 HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/site/contact
 ---
+2012/10/28 00:08:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/controllers/NotaController.php:181
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/controllers/NotaController.php(108): NotaController->loadModel()
+#1 /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/framework/web/actions/CInlineAction.php(50): NotaController->actionUpdate()
+#2 /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/framework/web/CController.php(292): CFilterChain->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/framework/web/CWebApplication.php(283): CController->run('update')
+#11 /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('nota/update')
+#12 /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/ProyectoDesarrollo/index.php/nota/update/
+HTTP_REFERER=http://localhost/ProyectoDesarrollo/nota/create
+---
