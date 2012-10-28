@@ -15,7 +15,7 @@ $this->menu=array(
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'nota-form',
-	'enableAjaxValidation'=>false,
+	'enableAjaxValidation'=>true,
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>

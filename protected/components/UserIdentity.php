@@ -24,7 +24,7 @@ class UserIdentity extends CUserIdentity
            if ($user && $user->clave==$this->password){
      		$this->errorCode=self::ERROR_NONE;
                 Yii::app()->user->setState('id_usuario',$user->id_usuario);
-
+                Yii::app()->user->setState('tokens', unserialize($user->token));
                
            }
            else {

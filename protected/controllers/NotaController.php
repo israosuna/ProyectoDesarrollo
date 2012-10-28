@@ -85,7 +85,7 @@ class NotaController extends Controller
 		$model=new Nota;
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+	        $this->performAjaxValidation($model);
 
 		if(isset($_POST['Nota']))
 		{
@@ -108,7 +108,7 @@ class NotaController extends Controller
 		$model=$this->loadModel();
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		 $this->performAjaxValidation($model);
 
 		if(isset($_POST['Nota']))
 		{

@@ -1,7 +1,10 @@
 <?php
 
 class DropboxController extends Controller {
-
+/**
+ *Guarda el token autenficado de Dropbox en la base de datos.
+ *  
+ */
     public function actionIndex() {
 
         $tokens = Yii::app()->user->getState('tokens');
@@ -25,12 +28,19 @@ class DropboxController extends Controller {
         }
 
         spl_autoload_register(array('YiiBase', 'autoload'));
+        
+        $usertoken= Usuario::model()->findByPk(Yii::app()->user->id_usuario);
+        $usertoken->token= serialize($tokens);
+        $usertoken->save(FALSE);
+            
         //$this->redirect('index');
         Yii::app()->request->redirect(Yii::app()->baseUrl.'/site/index');
-
+        
         
     }
-
+/**
+ *Hace una peticion de autentificacion OAuth y se envia a dropbox  
+ */
     public function actionAuthorize() {
         $nextUrl = 'http://' . Yii::app()->request->getServerName() . $this->createUrl('Authorize_step2');
         spl_autoload_unregister(array('YiiBase', 'autoload'));
@@ -51,6 +61,9 @@ class DropboxController extends Controller {
         echo "<script>window.location=\"$url\";</script>";
     }
     
+ /**
+  *Recibe la respuesta de dropbox para la aplicacion 
+  */
     public function actionAuthorize_step2() {
         $tokens = Yii::app()->user->getState('tokens');
         spl_autoload_unregister(array('YiiBase', 'autoload'));
@@ -69,6 +82,9 @@ class DropboxController extends Controller {
         Yii::app()->user->setState('tokens', $tokens);
         $this->redirect('index');
     }
+   /**
+    *Sube un archivo de prueba para DropBox. 
+    */
     public function actionSubir(){
         
          $model=new ArchivoAdjunto();

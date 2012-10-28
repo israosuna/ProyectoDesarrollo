@@ -69,7 +69,7 @@ class Libreta extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_usuario', 'required'),
+			array('id_usuario, nombre', 'required'),
 			array('id_libreta, id_usuario', 'numerical', 'integerOnly'=>true),
 			array('nombre', 'length', 'max'=>30),
 			array('fecha', 'safe'),

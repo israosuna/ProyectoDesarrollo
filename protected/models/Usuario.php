@@ -12,6 +12,7 @@
  * @property string $usuario_dropbox
  * @property string $password_dropbox
  * @property string $email
+ * @property string $token
  *
  * The followings are the available model relations:
  * @property Libreta[] $libretas
@@ -84,7 +85,7 @@ class Usuario extends CActiveRecord
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id_usuario, nombre, apellido, usuario, clave, usuario_dropbox, password_dropbox, email', 'safe', 'on'=>'search'),
-		        array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
+		        array('verifyCode', 'captcha', 'allowEmpty'=>TRUE),
                         array('clave2', 'compare', 'compareAttribute'=>'clave'),
                         
 
@@ -124,7 +125,7 @@ class Usuario extends CActiveRecord
 		);
 	}
 
-	/**
+        /**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
