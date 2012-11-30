@@ -129,7 +129,17 @@ class LibretaController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Libreta');
+                
+                $dataProvider = new CActiveDataProvider('Libreta', array(
+                    'criteria' => array(
+                        'condition' => 'id_usuario=' . Yii::app()->user->id_usuario,
+                    ),
+                    'pagination' => array(
+                        'pageSize' => 20,
+                    ),
+                        ));
+// $dataProvider->getData() will return a list of Post objects
+                
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));

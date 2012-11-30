@@ -53,7 +53,7 @@ class Nota extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'etiquetas' => array(self::MANY_MANY, 'Etiqueta', 'etiqueta_nota(id_nota, id_etiqueta)'),
-			'id_libreta0' => array(self::BELONGS_TO, 'Libreta', 'id_libreta'),
+			'libreta' => array(self::BELONGS_TO, 'Libreta', 'id_libreta'),
 			'archivo_adjuntos' => array(self::MANY_MANY, 'ArchivoAdjunto', 'nota_adjunto(id_nota, id_adjunto)'),
 		);
 	}

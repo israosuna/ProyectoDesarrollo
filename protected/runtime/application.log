@@ -1276,3 +1276,105 @@ Stack trace:
 REQUEST_URI=/ProyectoDesarrollo/index.php/nota/update/
 HTTP_REFERER=http://localhost/ProyectoDesarrollo/nota/create
 ---
+2012/11/30 16:13:10 [error] [exception.CException] exception 'CException' with message 'Propiedad "Usuario"."token" no se encuentra definida.' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CComponent.php:131
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/db/ar/CActiveRecord.php(144): CComponent->__get('token')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/components/UserIdentity.php(27): CActiveRecord->__get('token')
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/validators/CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/validators/CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/SiteController.php(147): CModel->validate()
+#7 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#8 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(292): CFilterChain->run()
+#15 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(283): CController->run('login')
+#17 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('site/login')
+#18 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#19 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/site/login
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/site/login
+---
+2012/11/30 16:27:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "Dropbox" solicitada.' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php:484
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(271): CController->missingAction('Dropbox')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(283): CController->run('Dropbox')
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('site/Dropbox/Au...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/site/Dropbox/Authorize
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/site/login
+---
+2012/11/30 16:38:22 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Select id_libreta from libreta where id_usuario=5' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `Nota` `t` WHERE id_libreta in Select id_libreta from libreta where id_usuario=5.
+in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/views/nota/index.php (18)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/NotaController.php (160)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php (13)
+2012/11/30 16:38:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Select id_libreta from libreta where id_usuario=5' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `Nota` `t` WHERE id_libreta in Select id_libreta from libreta where id_usuario=5' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/db/CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/db/ar/CActiveRecord.php(1540): CDbCommand->queryScalar()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CDataProvider.php(193): CActiveDataProvider->calculateTotalItemCount()
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CDataProvider.php(137): CActiveDataProvider->fetchData()
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/zii/widgets/CBaseListView.php(108): CDataProvider->getData()
+#7 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/zii/widgets/CListView.php(182): CBaseListView->init()
+#8 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CBaseController.php(148): CListView->init()
+#9 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CBaseController.php(173): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/views/nota/index.php(18): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CBaseController.php(127): require('/Applications/X...')
+#12 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(870): CBaseController->renderFile('/Applications/X...', Array, true)
+#14 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#15 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/NotaController.php(160): CController->render('index', Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/actions/CInlineAction.php(50): NotaController->actionIndex()
+#17 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#20 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(292): CFilterChain->run()
+#24 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(283): CController->run('')
+#26 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('nota')
+#27 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#28 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/proyectoDesarrollo/nota
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/site/index
+---
+2012/11/30 16:39:33 [error] [exception.CException] exception 'CException' with message 'Propiedad "Nota"."libreta" no se encuentra definida.' in /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CComponent.php:131
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/db/ar/CActiveRecord.php(144): CComponent->__get('libreta')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/views/nota/view.php(22): CActiveRecord->__get('libreta')
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CBaseController.php(127): require('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(870): CBaseController->renderFile('/Applications/X...', Array, true)
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/protected/controllers/NotaController.php(76): CController->render('view', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/actions/CInlineAction.php(50): NotaController->actionView()
+#8 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(292): CFilterChain->run()
+#15 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(283): CController->run('view')
+#17 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('nota/view')
+#18 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#19 /Applications/XAMPP/xamppfiles/htdocs/proyectoDesarrollo/index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/proyectoDesarrollo/index.php/nota/11
+HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/nota/update/11
+---

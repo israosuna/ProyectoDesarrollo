@@ -146,7 +146,15 @@ class NotaController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Nota');
+		$dataProvider = new CActiveDataProvider('Nota', array(
+                    'criteria' => array(
+                        'condition' => 'id_libreta in (Select id_libreta from libreta where id_usuario=' . Yii::app()->user->id_usuario.')',
+                    ),
+                    'pagination' => array(
+                        'pageSize' => 20,
+                    ),
+                        ));
+                
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));

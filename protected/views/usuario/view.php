@@ -16,18 +16,34 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Usuario #<?php echo $model->id_usuario; ?></h1>
+<h1>Usuario </h1>
 
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		'id_usuario',
-		'nombre',
-		'apellido',
-		'usuario',
-		'clave',
-		'usuario_dropbox',
-		'password_dropbox',
-		'email',
-	),
-)); ?>
+<div class="view">
+
+	
+	<b><?php echo CHtml::encode($model->getAttributeLabel('nombre')); ?>:</b>
+	<?php echo CHtml::encode($model->nombre); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($model->getAttributeLabel('apellido')); ?>:</b>
+	<?php echo CHtml::encode($model->apellido); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($model->getAttributeLabel('usuario')); ?>:</b>
+	<?php echo CHtml::encode($model->usuario); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($model->getAttributeLabel('clave')); ?>:</b>
+	<?php echo CHtml::encode($model->clave); ?>
+	<br />
+
+	
+
+	<?php /*
+	<b><?php echo CHtml::encode($data->getAttributeLabel('email')); ?>:</b>
+	<?php echo CHtml::encode($data->email); ?>
+	<br />
+
+	*/ ?>
+
+</div>

@@ -13,14 +13,22 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Nota #<?php echo $model->id_nota; ?></h1>
+<h1> Nota ></h1>
+<div class="view">
 
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		'id_nota',
-		'id_libreta',
-		'titulo',
-		'contenido',
-	),
-)); ?>
+	
+
+	<b><?php echo CHtml::encode($model->getAttributeLabel('id_libreta')); ?>:</b>
+	<?php echo CHtml::encode($model->libreta->nombre); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($model->getAttributeLabel('titulo')); ?>:</b>
+	<?php echo CHtml::encode($model->titulo); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($model->getAttributeLabel('contenido')); ?>:</b>
+	<?php echo CHtml::encode($model->contenido); ?>
+	<br />
+
+
+</div>
