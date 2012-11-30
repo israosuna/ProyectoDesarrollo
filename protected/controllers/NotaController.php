@@ -146,6 +146,9 @@ class NotaController extends Controller
 	 */
 	public function actionIndex()
 	{
+            
+             if (!isset($_GET['id_libreta']))
+             {
 		$dataProvider = new CActiveDataProvider('Nota', array(
                     'criteria' => array(
                         'condition' => 'id_libreta in (Select id_libreta from libreta where id_usuario=' . Yii::app()->user->id_usuario.')',
@@ -153,8 +156,19 @@ class NotaController extends Controller
                     'pagination' => array(
                         'pageSize' => 20,
                     ),
-                        ));
-                
+                ));
+             }
+             else {
+              
+		$dataProvider = new CActiveDataProvider('Nota', array(
+                    'criteria' => array(
+                        'condition' => 'id_libreta='.$_GET['id_libreta'],
+                    ),
+                    'pagination' => array(
+                        'pageSize' => 20,
+                    ),
+                ));   
+             }
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));

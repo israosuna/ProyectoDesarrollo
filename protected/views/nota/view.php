@@ -29,6 +29,16 @@ $this->menu=array(
 	<b><?php echo CHtml::encode($model->getAttributeLabel('contenido')); ?>:</b>
 	<?php echo CHtml::encode($model->contenido); ?>
 	<br />
+        <?php foreach ($model->archivo_adjuntos as $archivo)
+            { ?>
+        
+	<?php echo CHtml::link($archivo->nombre_archivo,array('/Dropbox/Download','ruta'=>$archivo->ruta_archivo)); ?>
+	<br />
+         <?php echo CHtml::image(CHtml::normalizeUrl(array('/Dropbox/getThumb','ruta'=>$archivo->ruta_archivo))); ?>
+	<br />
+       <?php }   ?>  
+
+   
 
 
 </div>

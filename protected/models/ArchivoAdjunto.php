@@ -39,6 +39,8 @@ class ArchivoAdjunto extends CActiveRecord
          */
          public function subirArchivo($filepath,$userdata)
          {
+             
+             
                  $tokens = Yii::app()->user->getState('tokens');
 
         spl_autoload_unregister(array('YiiBase', 'autoload'));
@@ -66,7 +68,7 @@ class ArchivoAdjunto extends CActiveRecord
         $archivoAdjunto= new ArchivoAdjunto();
         $archivoAdjunto->ruta_archivo= $filepath;
         $archivoAdjunto->extension= substr($filepath,  stripos($filepath,'.'));
-        $archivoAdjunto->nombre_archivo= substr($filepath, stripos($filepath,'/'));
+        $archivoAdjunto->nombre_archivo= substr($filepath, stripos($filepath,'/')+1);
         $archivoAdjunto->save();
         
         // Aqui guardo en la tabla M-N.
@@ -75,7 +77,7 @@ class ArchivoAdjunto extends CActiveRecord
         $relacion->id_nota= $userdata;
         $relacion->id_adjunto= $archivoAdjunto->id_adjunto;
         $relacion->save();
-        
+      
                
          }
         
@@ -88,13 +90,12 @@ class ArchivoAdjunto extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_adjunto', 'required'),
 			array('id_adjunto', 'numerical', 'integerOnly'=>true),
-			array('ruta_archivo, extension, nombre_archivo', 'length', 'max'=>30),
+			array('ruta_archivo, extension, nombre_archivo', 'length', 'max'=>300),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id_adjunto, ruta_archivo, extension, nombre_archivo', 'safe', 'on'=>'search'),
-                        array('file','file','types'=>'jpg, gif, png'),
+                       // array('file','file','types'=>'jpg, gif, png'),
 		);
 	}
 

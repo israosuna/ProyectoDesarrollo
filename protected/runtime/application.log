@@ -1378,3 +1378,232 @@ Stack trace:
 REQUEST_URI=/proyectoDesarrollo/index.php/nota/11
 HTTP_REFERER=http://localhost/proyectoDesarrollo/index.php/nota/update/11
 ---
+2012/11/30 20:56:37 [error] [exception.CException] exception 'CException' with message 'Propiedad "Libreta"."id_nota" no se encuentra definida.' in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/base/CComponent.php:131
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/db/ar/CActiveRecord.php(144): CComponent->__get('id_nota')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/views/libreta/_view.php(6): CActiveRecord->__get('id_nota')
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CBaseController.php(131): require('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/zii/widgets/CListView.php(260): CBaseController->renderFile('/Applications/X...', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/zii/widgets/CBaseListView.php(161): CListView->renderItems()
+#6 [internal function]: CBaseListView->renderSection(Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/zii/widgets/CBaseListView.php(144): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#8 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/zii/widgets/CBaseListView.php(129): CBaseListView->renderContent()
+#9 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CBaseController.php(174): CBaseListView->run()
+#10 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/views/libreta/index.php(17): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CBaseController.php(127): require('/Applications/X...')
+#12 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(870): CBaseController->renderFile('/Applications/X...', Array, true)
+#14 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#15 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/controllers/LibretaController.php(145): CController->render('index', Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/actions/CInlineAction.php(50): LibretaController->actionIndex()
+#17 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#20 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(292): CFilterChain->run()
+#24 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(283): CController->run('index')
+#26 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('libreta/index')
+#27 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#28 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/proyectodesarrollo/index.php/libreta/index
+HTTP_REFERER=http://localhost/proyectodesarrollo/libreta/create
+---
+2012/11/30 20:58:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "id_libreta" solicitada.' in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php:484
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(271): CController->missingAction('id_libreta')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(283): CController->run('id_libreta')
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('nota/id_libreta')
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/proyectodesarrollo/index.php/nota/id_libreta/4
+HTTP_REFERER=http://localhost/proyectodesarrollo/index.php/libreta/index
+---
+2012/11/30 21:24:17 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/auth/CAccessControlFilter.php:170
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/auth/CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(292): CFilterChain->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(283): CController->run('admin')
+#8 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('nota/admin')
+#9 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/proyectodesarrollo/index.php/nota/admin
+HTTP_REFERER=http://localhost/proyectodesarrollo/index.php/nota/index?id_libreta=7
+---
+2012/11/30 21:58:44 [error] [exception.CException] exception 'CException' with message 'Propiedad "Nota"."nombre" no se encuentra definida.' in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/base/CComponent.php:131
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/db/ar/CActiveRecord.php(144): CComponent->__get('nombre')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/views/nota/view.php(36): CActiveRecord->__get('nombre')
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CBaseController.php(127): require('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(870): CBaseController->renderFile('/Applications/X...', Array, true)
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/controllers/NotaController.php(76): CController->render('view', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/actions/CInlineAction.php(50): NotaController->actionView()
+#8 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(292): CFilterChain->run()
+#15 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(283): CController->run('view')
+#17 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('nota/view')
+#18 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#19 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/proyectodesarrollo/index.php/nota/14
+HTTP_REFERER=http://localhost/proyectodesarrollo/index.php/nota/update/14
+---
+2012/11/30 21:59:04 [error] [exception.CException] exception 'CException' with message 'Propiedad "ArchivoAdjunto"."nombre" no se encuentra definida.' in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/base/CComponent.php:131
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/db/ar/CActiveRecord.php(144): CComponent->__get('nombre')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/views/nota/view.php(36): CActiveRecord->__get('nombre')
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CBaseController.php(127): require('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(870): CBaseController->renderFile('/Applications/X...', Array, true)
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/controllers/NotaController.php(76): CController->render('view', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/actions/CInlineAction.php(50): NotaController->actionView()
+#8 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(292): CFilterChain->run()
+#15 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(283): CController->run('view')
+#17 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('nota/view')
+#18 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#19 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/proyectodesarrollo/index.php/nota/14
+HTTP_REFERER=http://localhost/proyectodesarrollo/index.php/nota/update/14
+---
+2012/11/30 22:08:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "ProyectoDesarrollo" solicitada.' in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php:484
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(271): CController->missingAction('ProyectoDesarro...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(283): CController->run('ProyectoDesarro...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('nota/ProyectoDe...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/proyectodesarrollo/index.php/nota/ProyectoDesarrollo/cena-de-navidad.jpg
+---
+2012/11/30 22:15:20 [error] [php] mime_content_type() [<a href='function.mime-content-type'>function.mime-content-type</a>]: File or path not found 'ProyectoDesarrollo/cena-de-navidad.jpg' (/Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/controllers/DropboxController.php:135)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(287): DropboxController->runAction()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(266): DropboxController->runActionWithFilters()
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(283): DropboxController->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php(13): CWebApplication->run()
+REQUEST_URI=/proyectodesarrollo/index.php/dropbox/GetThumb/?ruta=ProyectoDesarrollo/cena-de-navidad.jpg
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/controllers/DropboxController.php (135)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php (13)
+2012/11/30 22:24:22 [error] [php] Cannot modify header information - headers already sent by (output started at /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/controllers/DropboxController.php:127) (/Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/controllers/DropboxController.php:135)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(287): DropboxController->runAction()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(266): DropboxController->runActionWithFilters()
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(283): DropboxController->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php(13): CWebApplication->run()
+REQUEST_URI=/proyectodesarrollo/index.php/dropbox/GetThumb/ruta=ProyectoDesarrollo/cena-de-navidad.jpg
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/controllers/DropboxController.php (135)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php (13)
+2012/11/30 22:24:24 [error] [php] Cannot modify header information - headers already sent by (output started at /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/controllers/DropboxController.php:127) (/Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/controllers/DropboxController.php:135)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(287): DropboxController->runAction()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(266): DropboxController->runActionWithFilters()
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(283): DropboxController->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php(13): CWebApplication->run()
+REQUEST_URI=/proyectodesarrollo/index.php/dropbox/GetThumb/ruta=ProyectoDesarrollo/cena-de-navidad.jpg
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/controllers/DropboxController.php (135)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php (13)
+2012/11/30 22:24:24 [error] [php] Cannot modify header information - headers already sent by (output started at /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/controllers/DropboxController.php:127) (/Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/controllers/DropboxController.php:135)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(287): DropboxController->runAction()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(266): DropboxController->runActionWithFilters()
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(283): DropboxController->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php(13): CWebApplication->run()
+REQUEST_URI=/proyectodesarrollo/index.php/dropbox/GetThumb/ruta=ProyectoDesarrollo/cena-de-navidad.jpg
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/controllers/DropboxController.php (135)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php (13)
+2012/11/30 22:24:25 [error] [php] Cannot modify header information - headers already sent by (output started at /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/controllers/DropboxController.php:127) (/Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/controllers/DropboxController.php:135)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(287): DropboxController->runAction()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(266): DropboxController->runActionWithFilters()
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(283): DropboxController->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php(13): CWebApplication->run()
+REQUEST_URI=/proyectodesarrollo/index.php/dropbox/GetThumb/ruta=ProyectoDesarrollo/cena-de-navidad.jpg
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/controllers/DropboxController.php (135)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php (13)
+2012/11/30 22:34:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "Download?ruta=ProyectoDesarrollo%2Fnotas.png" solicitada.' in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php:484
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(271): CController->missingAction('Download?ruta=P...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(283): CController->run('Download?ruta=P...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('Dropbox/Downloa...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/proyectodesarrollo/index.php/Dropbox/Download%3Fruta=ProyectoDesarrollo%252Fnotas.png
+---
+2012/11/30 22:36:00 [error] [php] Cannot modify header information - headers already sent by (output started at /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/controllers/DropboxController.php:158) (/Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/controllers/DropboxController.php:166)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(287): DropboxController->runAction()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(266): DropboxController->runActionWithFilters()
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(283): DropboxController->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php(13): CWebApplication->run()
+REQUEST_URI=/proyectodesarrollo/index.php/Dropbox/Download/?ruta=ProyectoDesarrollo%252Fnotas.png
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/controllers/DropboxController.php (166)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php (13)
+2012/11/30 22:36:48 [error] [php] Cannot modify header information - headers already sent by (output started at /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/controllers/DropboxController.php:158) (/Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/controllers/DropboxController.php:166)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(287): DropboxController->runAction()
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(266): DropboxController->runActionWithFilters()
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(283): DropboxController->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#5 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php(13): CWebApplication->run()
+REQUEST_URI=/proyectodesarrollo/index.php/Dropbox/Download/?ruta=ProyectoDesarrollo%252Fnotas.png
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/protected/controllers/DropboxController.php (166)
+in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php (13)
+2012/11/30 22:36:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "Download?ruta=ProyectoDesarrollo%2Fnotas.png" solicitada.' in /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php:484
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CController.php(271): CController->missingAction('Download?ruta=P...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(283): CController->run('Download?ruta=P...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/web/CWebApplication.php(142): CWebApplication->runController('Dropbox/Downloa...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/proyectodesarrollo/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/proyectodesarrollo/index.php/Dropbox/Download%3Fruta=ProyectoDesarrollo%252Fnotas.png
+---

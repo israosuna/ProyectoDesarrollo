@@ -167,7 +167,7 @@ echo
 		$this->receptorClassName = $vars['receptorClassName'];
 		$this->methodName = $vars['methodName'];
 		$this->userdata = $vars['userdata'];
-
+              
 		if(($this->allowedExtensions == null) || ($this->allowedExtensions==''))
 			$this->allowedExtensions = array();
 
@@ -187,7 +187,7 @@ echo
 				if($result['success']==true){
 					Yii::log('ACTION CALLED - RESULT=SUCCESS','info');
 					$fullpath = $result['fullpath'];
-					$this->onFileUploaded($fullpath,' ');
+					$this->onFileUploaded($fullpath,$this->userdata);
 				}
 				else{
 					Yii::log('ACTION CALLED - RESULT=ERROR1','info');
@@ -209,6 +209,7 @@ echo
 
 	private function _invokeMethod($upladedFilePath,$userdata){
 	//Yii::log('hola llamando metodo','error');	
+            
             try{
                    
 			if(!empty($this->receptorClassName)){

@@ -107,4 +107,66 @@ class DropboxController extends Controller {
         }
         $this->render('subir', array('model'=>$model));
     }
+   public function actionGetThumb(){
+       $ruta =$_GET['ruta'];
+       $tokens = Yii::app()->user->getState('tokens');
+
+        spl_autoload_unregister(array('YiiBase', 'autoload'));
+        $dropbox = Yii::getPathOfAlias('ext.dropbox');
+        include ( $dropbox . DIRECTORY_SEPARATOR . 'autoload.php');
+        try {
+            $oauth = new Dropbox_OAuth_Curl(consumerKey, consumerSecret);
+            $oauth->setToken($tokens);
+
+            $dropbox = new Dropbox_API($oauth);
+            $thumb=$dropbox->getThumbnail($ruta);
+            
+            $info = $dropbox->getMetaData('/');
+        } catch (Exception $e) {
+            $error = "error: " . $e->getMessage();
+            echo $error;
+           // $this->redirect('dropbox/Authorize');
+        }
+        
+        spl_autoload_register(array('YiiBase', 'autoload'));
+        
+        
+        // We'll be outputting a PDF
+header('Content-type: image');
+        echo $thumb;
+       
+       
+   }
+
+    public function actionDownload(){
+       $ruta =$_GET['ruta'];
+       $tokens = Yii::app()->user->getState('tokens');
+
+        spl_autoload_unregister(array('YiiBase', 'autoload'));
+        $dropbox = Yii::getPathOfAlias('ext.dropbox');
+        include ( $dropbox . DIRECTORY_SEPARATOR . 'autoload.php');
+        try {
+            $oauth = new Dropbox_OAuth_Curl(consumerKey, consumerSecret);
+            $oauth->setToken($tokens);
+
+            $dropbox = new Dropbox_API($oauth);
+            $download=$dropbox->getFile($ruta);
+            
+            $info = $dropbox->getMetaData('/');
+        } catch (Exception $e) {
+            $error = "error: " . $e->getMessage();
+            echo $error;
+           // $this->redirect('dropbox/Authorize');
+        }
+        
+        spl_autoload_register(array('YiiBase', 'autoload'));
+        
+        
+        // We'll be outputting a PDF
+header('Content-type: application/octet-stream');
+    header("Content-Disposition: attachment; filename=".substr($ruta, stripos($ruta,'/')+1));
+        echo $download;
+       
+       
+   }
 }
