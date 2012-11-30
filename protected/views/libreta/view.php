@@ -9,7 +9,7 @@ $this->menu=array(
 	array('label'=>'Create Libreta', 'url'=>array('create')),
 	array('label'=>'Update Libreta', 'url'=>array('update', 'id'=>$model->id_libreta)),
 	array('label'=>'Delete Libreta', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_libreta),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Libreta', 'url'=>array('admin')),
+	//array('label'=>'Manage Libreta', 'url'=>array('admin')),
 );
 ?>
 

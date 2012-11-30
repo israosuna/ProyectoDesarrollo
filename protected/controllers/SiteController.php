@@ -30,7 +30,7 @@ class SiteController extends Controller {
         // renderiza el archivo view 'protected/views/site/index.php'
         //  layout por defecto 'protected/views/layouts/main.php'
        $tokens = Yii::app()->user->getState('tokens');
-
+       $url= CHtml::normalizeUrl(array('/Dropbox/Authorize'));
         spl_autoload_unregister(array('YiiBase', 'autoload'));
         $dropbox = Yii::getPathOfAlias('ext.dropbox');
         include ( $dropbox . DIRECTORY_SEPARATOR . 'autoload.php');
@@ -43,7 +43,7 @@ class SiteController extends Controller {
 
         } catch (Exception $e) {
             $error = "error: " . $e->getMessage();
-            $this->redirect('Dropbox/Authorize');
+            $this->redirect($url);
             
         }
 
@@ -145,7 +145,7 @@ class SiteController extends Controller {
             $model->attributes = $_POST['LoginForm'];
             // valida los datos y redirecciona
             if ($model->validate() && $model->login())
-                $this->redirect(Yii::app()->user->returnUrl);
+                $this->redirect(CHtml::normalizeUrl(array('/Dropbox/ItsDropboxUp')));
         }
         // muestra el formulario de login
         $this->render('login', array('model' => $model));

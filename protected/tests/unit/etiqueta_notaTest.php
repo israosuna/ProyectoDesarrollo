@@ -8,6 +8,6 @@ class etiqueta_notaTest extends CDbTestCase
 
 	public function testCreate()
 	{
-
+               
 	}
 }

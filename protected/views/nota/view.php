@@ -9,7 +9,7 @@ $this->menu=array(
 	array('label'=>'Create Nota', 'url'=>array('create')),
 	array('label'=>'Update Nota', 'url'=>array('update', 'id'=>$model->id_nota)),
 	array('label'=>'Delete Nota', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_nota),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Nota', 'url'=>array('admin')),
+//  	array('label'=>'Manage Nota', 'url'=>array('admin')),
 );
 ?>
 

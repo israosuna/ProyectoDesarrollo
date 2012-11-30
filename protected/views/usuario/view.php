@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Usuario', 'url'=>array('index')),
-	array('label'=>'Create Usuario', 'url'=>array('create')),
-	array('label'=>'Update Usuario', 'url'=>array('update', 'id'=>$model->id_usuario)),
-	array('label'=>'Delete Usuario', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_usuario),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Usuario', 'url'=>array('admin')),
+	array('label'=>'List', 'url'=>array('index')),
+	array('label'=>'Create', 'url'=>array('create')),
+	array('label'=>'Update', 'url'=>array('update', 'id'=>$model->id_usuario)),
+	array('label'=>'Delete', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_usuario),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Manage', 'url'=>array('admin')),
 );
 ?>
 

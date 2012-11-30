@@ -137,7 +137,20 @@ header('Content-type: image');
        
        
    }
-
+public function actionItsDropboxUp(){
+    $response='';
+    $response= @file_get_contents('https://www.dropbox.com');
+    if($response){
+                $this->redirect('index');
+        
+    }
+    
+    else {
+        $this->render('/site/error',array('message'=>'Verificar Conexion de Red'));
+        Yii::log('error en la conexion de la red a nivel de DropboxController', CLogger::LEVEL_WARNING);
+        
+    }
+}
     public function actionDownload(){
        $ruta =$_GET['ruta'];
        $tokens = Yii::app()->user->getState('tokens');
