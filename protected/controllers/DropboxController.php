@@ -141,7 +141,7 @@ public function actionItsDropboxUp(){
     $response='';
     $response= @file_get_contents('https://www.dropbox.com');
     if($response){
-                $this->redirect('index');
+        Yii::app()->request->redirect(Yii::app()->baseUrl.'/site/index');
         
     }
     
