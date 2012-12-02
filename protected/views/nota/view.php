@@ -13,7 +13,7 @@ $this->menu=array(
 );
 ?>
 
-<h1> Nota ></h1>
+<h1> Nota</h1>
 <div class="view">
 
 	
