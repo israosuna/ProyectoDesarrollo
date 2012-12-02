@@ -5,8 +5,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Libreta', 'url'=>array('index')),
-	array('label'=>'Create Libreta', 'url'=>array('create')),
+	array('label'=>'Listar Libreta', 'url'=>array('index')),
+	array('label'=>'Crear Libreta', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "

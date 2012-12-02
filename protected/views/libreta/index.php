@@ -4,8 +4,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Libreta', 'url'=>array('create')),
-	array('label'=>'Manage Libreta', 'url'=>array('admin')),
+	array('label'=>'Crear Libreta', 'url'=>array('create')),
+	array('label'=>'Modificar Libreta', 'url'=>array('admin')),
 );
 ?>
 
