@@ -37,7 +37,7 @@ class Nota extends CActiveRecord
 		// will receive user inputs.
 		return array(
                         array('id_libreta, titulo','required'),
-			array('titulo, contenido', 'length', 'max'=>300),
+			array('titulo, contenido', 'length', 'max'=>30),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id_nota, id_libreta, titulo, contenido', 'safe', 'on'=>'search'),
