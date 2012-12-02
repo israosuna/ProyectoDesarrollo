@@ -175,6 +175,7 @@ class NotaController extends Controller
              }
              
              if(isset($_GET['buscar'])) {
+                 $_GET['buscar']= str_replace('#', '', $_GET['buscar']);
                  $dataProvider = new CActiveDataProvider('Nota', array(
                     'criteria' => array(
                         'condition' => 
