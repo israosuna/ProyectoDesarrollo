@@ -26,6 +26,12 @@
 		<?php echo $form->textArea($model,'contenido',array('size'=>30,'maxlength'=>300)); ?>
 		<?php echo $form->error($model,'contenido'); ?>
 	</div>
+	
+        <div class="row">
+		<?php echo $form->labelEx($model,'hash_etiquetas'); ?>
+		<?php echo $form->textField($model,'hash_etiquetas',array('size'=>30,'maxlength'=>300)); ?>
+		<?php echo $form->error($model,'hash_etiquetas'); ?>
+	</div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

@@ -38,7 +38,6 @@ class Etiqueta extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_etiqueta', 'required'),
 			array('id_etiqueta', 'numerical', 'integerOnly'=>true),
 			array('nombre', 'length', 'max'=>30),
 			// The following rule is used by search().

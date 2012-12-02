@@ -90,7 +90,9 @@ class NotaController extends Controller
 		if(isset($_POST['Nota']))
 		{
 			$model->attributes=$_POST['Nota'];
-			if($model->save())
+		        $model->hash_etiquetas= $_POST['Nota']['hash_etiquetas'];
+
+                        if($model->save())
 				$this->redirect(array('update','id'=>$model->id_nota));
 		}
 
@@ -113,7 +115,8 @@ class NotaController extends Controller
 		if(isset($_POST['Nota']))
 		{
 			$model->attributes=$_POST['Nota'];
-			if($model->save())
+			$model->hash_etiquetas= $_POST['Nota']['hash_etiquetas'];
+                        if($model->save())
 				$this->redirect(array('view','id'=>$model->id_nota));
 		}
 
