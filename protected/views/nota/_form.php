@@ -17,13 +17,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'titulo'); ?>
-		<?php echo $form->textField($model,'titulo',array('size'=>30,'maxlength'=>30)); ?>
+		<?php echo $form->textField($model,'titulo',array('size'=>30,'maxlength'=>300)); ?>
 		<?php echo $form->error($model,'titulo'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'contenido'); ?>
-		<?php echo $form->textArea($model,'contenido',array('size'=>30,'maxlength'=>30)); ?>
+		<?php echo $form->textArea($model,'contenido',array('size'=>30,'maxlength'=>300)); ?>
 		<?php echo $form->error($model,'contenido'); ?>
 	</div>
 
