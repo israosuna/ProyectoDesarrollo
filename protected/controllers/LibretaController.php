@@ -74,7 +74,7 @@ class LibretaController extends Controller
 		{
 			$model->attributes=$_POST['Libreta'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id_libreta));
+				$this->redirect(array('Nota/index','id_libreta'=>$model->id_libreta));
 		}
 
 		$this->render('create',array(

@@ -7,20 +7,20 @@ $this->breadcrumbs=array(
 	$model->id_usuario,
 );
 
-$this->menu=array(
-	array('label'=>'List', 'url'=>array('index')),
-	array('label'=>'Create', 'url'=>array('create')),
-	array('label'=>'Update', 'url'=>array('update', 'id'=>$model->id_usuario)),
-	array('label'=>'Delete', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_usuario),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage', 'url'=>array('admin')),
-);
+//$this->menu=array(
+//	array('label'=>'List', 'url'=>array('index')),
+//	array('label'=>'Create', 'url'=>array('create')),
+//	array('label'=>'Update', 'url'=>array('update', 'id'=>$model->id_usuario)),
+//	array('label'=>'Delete', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_usuario),'confirm'=>'Are you sure you want to delete this item?')),
+//	array('label'=>'Manage', 'url'=>array('admin')),
+//);
 ?>
 
 <h1>Usuario </h1>
 
 <div class="view">
 
-	
+        <p>ENHORABUENA TE HAS RESGISTRADO!</p>
 	<b><?php echo CHtml::encode($model->getAttributeLabel('nombre')); ?>:</b>
 	<?php echo CHtml::encode($model->nombre); ?>
 	<br />

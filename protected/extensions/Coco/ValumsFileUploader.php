@@ -92,9 +92,9 @@ class ValumsFileUploader {
                 $filename .= rand(10, 99);
             }
         }
-
+        
         $fullpath = $uploadDirectory . $filename . '.' . $ext;
-
+        $fullpath= str_replace(' ', '_', $fullpath);
         if ($this->file->save($fullpath)){
             return array('success'=>true,'filename'=>$filename,'size'=>$size,'ext'=>$ext,'path'=>$uploadDirectory,'fullpath'=>$fullpath);
         } else {
