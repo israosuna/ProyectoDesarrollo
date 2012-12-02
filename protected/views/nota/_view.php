@@ -17,4 +17,6 @@
 	<br />
 
 
+	<?php echo CHtml::encode($model->hash_etiquetas); ?>
+	<br />
 </div>

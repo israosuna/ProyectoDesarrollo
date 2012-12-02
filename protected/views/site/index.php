@@ -3,6 +3,12 @@
 
 $this->pageTitle=Yii::app()->name;
 ?>
+<p>Buscar Notas: <?php echo CHtml::form(CHtml::normalizeUrl(array('/Nota/index')),'get'); 
+echo CHtml::textField('buscar');
+echo CHtml::submitButton('ir');
+echo CHtml::endForm();
+        ?>
+    
 <table class="menu">
     <tr>
         <td>

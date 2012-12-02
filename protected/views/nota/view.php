@@ -29,6 +29,8 @@ $this->menu=array(
 	<b><?php echo CHtml::encode($model->getAttributeLabel('contenido')); ?>:</b>
 	<?php echo CHtml::encode($model->contenido); ?>
 	<br />
+	<?php echo CHtml::encode($model->hash_etiquetas); ?>
+	<br />
         <?php foreach ($model->archivo_adjuntos as $archivo)
             { ?>
         

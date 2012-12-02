@@ -161,6 +161,7 @@ class NotaController extends Controller
                     ),
                 ));
              }
+             
              else {
               
 		$dataProvider = new CActiveDataProvider('Nota', array(
@@ -172,6 +173,25 @@ class NotaController extends Controller
                     ),
                 ));   
              }
+             
+             if(isset($_GET['buscar'])) {
+                 $dataProvider = new CActiveDataProvider('Nota', array(
+                    'criteria' => array(
+                        'condition' => 
+                        "( contenido like '%".$_GET['buscar']."%'".
+                        " or id_nota in (select id_nota from etiqueta_nota where id_etiqueta in (select id_etiqueta from etiqueta where nombre like '%".$_GET['buscar']."%') )".
+                        " ) and id_libreta in (Select id_libreta from libreta where id_usuario=" . Yii::app()->user->id_usuario.")",
+                    ),
+                    'pagination' => array(
+                        'pageSize' => 2 ,
+                    ),
+                ));
+                 
+                 
+             }
+             
+             
+             
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
