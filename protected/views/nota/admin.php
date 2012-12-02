@@ -5,8 +5,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Nota', 'url'=>array('index')),
-	array('label'=>'Create Nota', 'url'=>array('create')),
+	array('label'=>'Listar Nota', 'url'=>array('index')),
+	array('label'=>'Crear Nota', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
