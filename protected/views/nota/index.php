@@ -4,8 +4,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Nota', 'url'=>array('create')),
-	array('label'=>'Manage Nota', 'url'=>array('admin')),
+	array('label'=>'Crear Nota', 'url'=>array('create')),
+	array('label'=>'Borrar Nota', 'url'=>array('delete')),
 );
 ?>
 
