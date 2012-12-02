@@ -6,6 +6,12 @@ $this->pageTitle=Yii::app()->name . ' - Error';
 $this->breadcrumbs=array(
 	'Error',
 );
+if (!isset($code)){
+    $code='';
+}
+if (!isset($message)){
+    $message='';
+}
 ?>
 
 <h2>Error <?php echo $code; ?></h2>
