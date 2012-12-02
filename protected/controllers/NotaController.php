@@ -53,7 +53,7 @@ class NotaController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','index','view','coco','delete'),
+				'actions'=>array('create','update','index','view','coco','delete','admin'),
 				'users'=>array('@'),
 			),
 			array('allow', // permite acciones admin y borrar
