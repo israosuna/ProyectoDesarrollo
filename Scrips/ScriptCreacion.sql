@@ -157,7 +157,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 
 INSERT INTO `usuario` (`id_usuario`, `nombre`, `apellido`, `usuario`, `clave`, `usuario_dropbox`, `password_dropbox`, `email`, `token`) VALUES
 (1, 'admin', 'admin', 'admin', 'admin', NULL, NULL, 'admin@admin.com', NULL)
-);
+);	
 --
 -- Constraints for dumped tables
 --
