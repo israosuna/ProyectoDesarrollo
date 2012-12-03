@@ -3,11 +3,9 @@
 
 $this->pageTitle=Yii::app()->name;
 ?>
-<p>Buscar Notas: <?php echo CHtml::form(CHtml::normalizeUrl(array('/Nota/index')),'get'); 
-echo CHtml::textField('buscar');
-echo CHtml::submitButton('ir');
+<p>Buscar Notas: <?php echo CHtml::form(CHtml::normalizeUrl(array('/Nota/index')),'get'); echo CHtml::textField('buscar');echo CHtml::submitButton('ir');
 echo CHtml::endForm();
-        ?>
+        ?> </p>
     
 <table class="menu">
     <tr>
