@@ -56,7 +56,9 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=ProyectoDesarrollo',
+                        'connectionString' => 'mysql:host=localhost;dbname=ProyectoDesarrollo;port=3306;',
+			
+//'connectionString' => 'mysql:host=localhost;dbname=ProyectoDesarrollo',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',
@@ -82,6 +84,9 @@ return array(
 				*/
 			),
 		),
+                    'fixture'=>array(
+            'class'=>'system.test.CDbFixtureManager',
+        ),
 	),
 
 	// application-level parameters that can be accessed

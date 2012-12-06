@@ -10,8 +10,10 @@
 
 require_once('PHPUnit/Util/Filesystem.php'); // workaround for PHPUnit <= 3.6.11
 require_once('PHPUnit/Autoload.php');
-spl_autoload_unregister('phpunit_autoload');
-Yii::registerAutoloader('phpunit_autoload');
+if (in_array('phpunit_autoload', spl_autoload_functions())) {
+    spl_autoload_unregister('phpunit_autoload');
+    Yii::registerAutoloader('phpunit_autoload');
+}
 
 /**
  * CTestCase is the base class for all test case classes.
