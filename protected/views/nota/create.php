@@ -10,7 +10,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create Nota</h1>
+<h1>Crear Nota</h1>
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -18,7 +18,7 @@ $this->menu=array(
 	'enableAjaxValidation'=>true,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Campos con <span class="required">*</span> son obligatorios.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 

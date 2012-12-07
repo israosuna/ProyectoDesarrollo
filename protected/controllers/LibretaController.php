@@ -135,7 +135,7 @@ class LibretaController extends Controller
                         'condition' => 'id_usuario=' . Yii::app()->user->id_usuario,
                     ),
                     'pagination' => array(
-                        'pageSize' => 20,
+                        'pageSize' => 5,
                     ),
                         ));
 // $dataProvider->getData() will return a list of Post objects

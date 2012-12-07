@@ -64,7 +64,7 @@ class Nota extends CActiveRecord {
     public function attributeLabels() {
         return array(
             'id_nota' => 'Id Nota',
-            'id_libreta' => 'Id Libreta',
+            'id_libreta' => 'Nombre Libreta',
             'titulo' => 'Titulo',
             'contenido' => 'Contenido',
             'hash_etiquetas' => 'Introduzca Etiquetas con # (ejm. #Calculo).'

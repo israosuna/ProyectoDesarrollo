@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update Nota <?php echo $model->id_nota; ?></h1>
+<h1>Contenido de Nota </h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

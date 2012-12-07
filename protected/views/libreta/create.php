@@ -10,6 +10,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create Libreta</h1>
+<h1>Crear Libreta</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
