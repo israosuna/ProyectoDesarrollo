@@ -9,16 +9,16 @@ class NotaTest extends CDbTestCase
 	public function testPruebaPrincipalNota()
 	{
             $nota= new Nota();
-            $nota->setAttribute($this->getFixtureData('prueba1'));
-            
+           // $nota->setAttribute($this->getFixtureData('prueba1'));
+           $nota->setAttributes($this->getFixtureData('prueba2'));
             
             $this->assertTrue($nota->save(FALSE),'No se pudo guardar la nota');
             $this->assertNotNull($nota->id_nota,'Id invalido');
             
             
-            $nota= Nota::model()->findByPk($nota->id_nota);
+            $nota= Nota::model()->findByPk($this->getFixtureData('1'));
             $this->assertNotNull($nota,'No se puede encontrar Notas');
-            $nota->setAttribute($this->getFixtureData('prueba2'));
+            //$nota->setAttribute($this->getFixtureData('prueba2'));
             
             
             $this->assertTrue($nota->save(FALSE),'No se pudo editar la Nota');
