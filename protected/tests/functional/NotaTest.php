@@ -3,7 +3,7 @@
 class NotaTest extends WebTestCase
 {
 	public $fixtures=array(
-		'notas'=>'Nota',
+		'nota'=>'Nota',
 	);
 
 	public function testShow()
@@ -11,28 +11,28 @@ class NotaTest extends WebTestCase
 		$this->open('?r=nota/view&id=1');
 	}
 
-	public function testCreate()
-	{
-		$this->open('?r=nota/create');
-	}
-
-	public function testUpdate()
-	{
-		$this->open('?r=nota/update&id=1');
-	}
-
-	public function testDelete()
-	{
-		$this->open('?r=nota/view&id=1');
-	}
-
-	public function testList()
-	{
-		$this->open('?r=nota/index');
-	}
-
-	public function testAdmin()
-	{
-		$this->open('?r=nota/admin');
-	}
+//	public function testCreate()
+//	{
+//		$this->open('?r=nota/create');
+//	}
+//
+//	public function testUpdate()
+//	{
+//		$this->open('?r=nota/update&id=1');
+//	}
+//
+//	public function testDelete()
+//	{
+//		$this->open('?r=nota/view&id=1');
+//	}
+//
+//	public function testList()
+//	{
+//		$this->open('?r=nota/index');
+//	}
+//
+//	public function testAdmin()
+//	{
+//		$this->open('?r=nota/admin');
+//	}
 }
