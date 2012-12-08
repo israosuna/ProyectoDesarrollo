@@ -69,6 +69,7 @@ class Nota extends CActiveRecord {
             'id_libreta' => 'Nombre Libreta',
             'titulo' => 'Titulo',
             'contenido' => 'Contenido',
+            'fecha' => 'Fecha',
             'hash_etiquetas' => 'Introduzca Etiquetas con # (ejm. #Calculo).'
         );
     }

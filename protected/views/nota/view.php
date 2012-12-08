@@ -25,6 +25,10 @@ $this->menu=array(
 	<b><?php echo CHtml::encode($model->getAttributeLabel('titulo')); ?>:</b>
 	<?php echo CHtml::encode($model->titulo); ?>
 	<br />
+        
+        <b><?php echo CHtml::encode($model->getAttributeLabel('Fecha')); ?>:</b>
+	<?php echo CHtml::encode($model->fecha); ?>
+	<br />
 
 	<b><?php echo CHtml::encode($model->getAttributeLabel('contenido')); ?>:</b>
 	<?php echo CHtml::encode($model->contenido); ?>

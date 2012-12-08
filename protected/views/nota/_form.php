@@ -20,6 +20,14 @@
 		<?php echo $form->textField($model,'titulo',array('size'=>30,'maxlength'=>300)); ?>
 		<?php echo $form->error($model,'titulo'); ?>
 	</div>
+        
+        <div class="row">
+                <?php $fecha = date( 'Y-m-d H:i:s' );?>
+		<?php echo $form->labelEx($model,'fecha'); ?>
+                <?php echo $fecha; ?>
+		<?php echo $form->hiddenfield($model,'fecha',  array('value'=>$fecha)); ?>
+		<?php echo $form->error($model,'fecha'); ?>
+	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'contenido'); ?>

@@ -9,6 +9,10 @@
 	<?php echo CHtml::link(CHtml::encode($data->titulo), array('view', 'id'=>$data->id_nota)); ?>
 	<br />
 
+        <b><?php echo CHtml::encode($data->getAttributeLabel('Fecha')); ?>:</b>
+	<?php echo CHtml::encode($data->fecha); ?>
+	<br />
+        
 	<b><?php echo CHtml::encode($data->getAttributeLabel('contenido')); ?>:</b>
 	<?php echo CHtml::encode($data->contenido); ?>
 	<br />
