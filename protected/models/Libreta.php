@@ -115,7 +115,7 @@ class Libreta extends CActiveRecord
 		// should not be searched.
 
 		$criteria=new CDbCriteria;
-                Yii::log('Se realizo una busqueda de libreta',  CLogger::LEVEL_INFO);
+
 		$criteria->compare('id_libreta',$this->id_libreta);
 		$criteria->compare('id_usuario',$this->id_usuario);
 		$criteria->compare('nombre',$this->nombre,true);

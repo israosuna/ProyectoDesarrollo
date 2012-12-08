@@ -135,7 +135,7 @@ class Usuario extends CActiveRecord
 		// should not be searched.
 
 		$criteria=new CDbCriteria;
-                Yii::log('Se realizo una busqueda de usuario',  CLogger::LEVEL_INFO);
+
 		$criteria->compare('id_usuario',$this->id_usuario);
 		$criteria->compare('nombre',$this->nombre,true);
 		$criteria->compare('apellido',$this->apellido,true);
