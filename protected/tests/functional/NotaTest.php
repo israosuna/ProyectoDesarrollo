@@ -10,10 +10,7 @@ class NotaTest extends WebTestCase
 	{
 		$this->open('?r=nota/view&id=1');
 	}
-public static function tearDownAfterClass()
-{
-    Yii::app()->onEndRequest(new CEvent(null));
-}
+
 //	public function testCreate()
 //	{
 //		$this->open('?r=nota/create');

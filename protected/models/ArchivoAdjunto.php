@@ -24,8 +24,9 @@ class ArchivoAdjunto extends CActiveRecord
 		return parent::model($className);
 	}
         public $file;
-                
-	/**
+        public static $autoload=FALSE;
+
+        /**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
@@ -39,19 +40,22 @@ class ArchivoAdjunto extends CActiveRecord
          */
          public function subirArchivo($filepath,$userdata)
          {
-             
-             
-                 $tokens = Yii::app()->user->getState('tokens');
+             $nota= Nota::model()->findByPk($userdata);
+             $tokens=  unserialize($nota->libreta->usuario->token);
+                // $tokens = Yii::app()->user->getState('tokens');
 
+        if(!self::$autoload){
         spl_autoload_unregister(array('YiiBase', 'autoload'));
         $dropbox = Yii::getPathOfAlias('ext.dropbox');
         include ( $dropbox . DIRECTORY_SEPARATOR . 'autoload.php');
+        
+        }
         try {
             $oauth = new Dropbox_OAuth_Curl(consumerKey, consumerSecret);
             $oauth->setToken($tokens);
 
             $dropbox = new Dropbox_API($oauth);
-                $dropbox->putFile($filepath,$filepath);
+                $dropbox->putFile($filepath,dirname(__FILE__).'/../../'.$filepath);
                 
 
 
@@ -62,8 +66,13 @@ class ArchivoAdjunto extends CActiveRecord
            // $this->redirect('dropbox/Authorize');
         }
 
+        if(!self::$autoload)
         spl_autoload_register(array('YiiBase', 'autoload'));
-        unlink($filepath);
+        
+        self::$autoload=true;
+        
+        chmod(dirname(__FILE__).'/../../'.$filepath, 0777);
+        @unlink(dirname(__FILE__).'/../../'.$filepath);
         // Guardado de la ruta del archivo en la base de datos.
         $archivoAdjunto= new ArchivoAdjunto();
         $archivoAdjunto->ruta_archivo= $filepath;
@@ -74,11 +83,11 @@ class ArchivoAdjunto extends CActiveRecord
         // Aqui guardo en la tabla M-N.
         
         $relacion = new nota_adjunto();
-        $relacion->id_nota= $userdata;
+        $relacion->id_nota= $nota->id_nota;
         $relacion->id_adjunto= $archivoAdjunto->id_adjunto;
         $relacion->save();
-      
-               
+        
+               return TRUE;
          }
         
         
