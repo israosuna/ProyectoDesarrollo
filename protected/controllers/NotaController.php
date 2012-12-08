@@ -162,7 +162,7 @@ class NotaController extends Controller
                         'condition' => 'id_libreta in (Select id_libreta from libreta where id_usuario=' . Yii::app()->user->id_usuario.')',
                     ),
                     'pagination' => array(
-                        'pageSize' => 2 ,
+                        'pageSize' => 5 ,
                     ),
                 ));
              }
@@ -174,7 +174,7 @@ class NotaController extends Controller
                         'condition' => 'id_libreta='.$_GET['id_libreta'],
                     ),
                     'pagination' => array(
-                        'pageSize' => 2,
+                        'pageSize' => 5,
                     ),
                 ));   
              }
@@ -232,7 +232,7 @@ class NotaController extends Controller
                         'condition' => $condition,
                         ),
                     'pagination' => array(
-                        'pageSize' => 2 ,
+                        'pageSize' => 5,
                     ),
                 ));
                  

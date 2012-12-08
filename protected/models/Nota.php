@@ -39,6 +39,7 @@ class Nota extends CActiveRecord {
             array('id_libreta, titulo', 'required'),
             array('titulo', 'length', 'max' => 300),
             array('contenido', 'length', 'max' => 3000),
+            array('fecha', 'safe'),
             
 
             // The following rule is used by search().
