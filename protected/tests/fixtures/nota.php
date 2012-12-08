@@ -6,6 +6,6 @@ return array(
                 'id_nota' => '1',
                 'id_libreta' => '1',
                 'titulo' => 'Prueba Unitaria',
-		'contenido' => 'Contenido de la prueba unitaria',
+		'contenido' => 'Contenido de la prueba unitari',
 	),
 );
