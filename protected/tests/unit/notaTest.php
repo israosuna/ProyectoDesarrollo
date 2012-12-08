@@ -14,9 +14,8 @@ class NotaTest extends CDbTestCase
             
             //$this->assertTrue($nota->save(FALSE),'No se pudo guardar la nota');
             //$this->assertNotNull($nota->id_nota,'Id invalido');
-            
-            
-            $nota= Nota::model()->findByPk($this->getFixtureData('1'));
+         
+            $nota= Nota::model()->findByPk($this->getFixtureData('id_nota'));
             $this->assertNotNull($nota,'No se puede encontrar Notas');
             //$nota->setAttribute($this->getFixtureData('prueba2'));
             

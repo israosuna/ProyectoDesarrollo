@@ -3,14 +3,17 @@
 class NotaTest extends WebTestCase
 {
 	public $fixtures=array(
-		'nota'=>'Nota',
+		'notas'=>'Nota',
 	);
 
 	public function testShow()
 	{
 		$this->open('?r=nota/view&id=1');
 	}
-
+public static function tearDownAfterClass()
+{
+    Yii::app()->onEndRequest(new CEvent(null));
+}
 //	public function testCreate()
 //	{
 //		$this->open('?r=nota/create');

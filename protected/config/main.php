@@ -74,7 +74,8 @@ return array(
 			'routes'=>array(
 				array(
 					'class'=>'CFileLogRoute',
-					'levels'=>'error, warning',
+					'levels'=>'error, warning, trace, info',
+                                        'categories'=>'application.*',
 				),
 				// uncomment the following to show log messages on web pages
 				/*
@@ -84,6 +85,7 @@ return array(
 				*/
 			),
 		),
+            
                     'fixture'=>array(
             'class'=>'system.test.CDbFixtureManager',
         ),
