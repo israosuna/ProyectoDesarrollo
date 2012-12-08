@@ -130,7 +130,7 @@ class Nota extends CActiveRecord {
         // should not be searched.
 
         $criteria = new CDbCriteria;
-
+        
         $criteria->compare('id_nota', $this->id_nota);
 
         $criteria->compare('id_libreta', $this->id_libreta);
