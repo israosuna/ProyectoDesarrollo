@@ -36,7 +36,7 @@ class Nota extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('id_libreta, titulo, fecha', 'required'),
+            array('id_libreta, titulo', 'required'),
             array('titulo', 'length', 'max' => 300),
             array('contenido', 'length', 'max' => 3000),
 
