@@ -21,7 +21,7 @@ class NotaTest extends CDbTestCase
 	}
     public function testAdjuntar(){
       
-                    $nota= new Nota();
+            $nota= new Nota();
             $pre = $this->getFixtureData('notas');
             $nota->setAttributes($pre['pruebaAdjuntar']);
             Yii::log(print_r($pre,TRUE),'error');
