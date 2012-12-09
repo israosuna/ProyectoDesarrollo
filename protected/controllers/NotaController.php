@@ -181,52 +181,8 @@ class NotaController extends Controller
              
              if(isset($_GET['buscar'])) {
                  
-                
-                 $keys=  explode(' ', $_GET['buscar']);
-                 $contenidoLike='';
-                 $nombreEtiquetaLike='';
-                 $first=true;
-                 foreach ($keys as $key){
-                    $isTag=  strpos( $key , '#') !== false;
-                     
-                    $key= str_replace('#', '', $key);
-                    if(!$first){
-                        if(!$isTag){
-                            if($contenidoLike)
-                                $contenidoLike.=' AND ';
-                        }else{
-                            if($nombreEtiquetaLike)
-                               $nombreEtiquetaLike.=' AND ';
-                        }
-                    }
-                    
-                        if(!$isTag)
-                           $contenidoLike.="contenido like '%".$key."%'";
-                        else
-                            $nombreEtiquetaLike.="nombre like '%".$key."%'";
-                    
-                    
-                    
-                    
-                    $first=false;
-                 }
-                 
-                 $condition="( ";
-                 
-                 if($contenidoLike)
-                    $condition.=" ( $contenidoLike )";
-                 
-                 if($nombreEtiquetaLike){
-                     if($contenidoLike)
-                         $condition.=' AND ';
-                        $condition.=" id_nota in (select id_nota from etiqueta_nota where id_etiqueta in ".
-                         "(select id_etiqueta from etiqueta where $nombreEtiquetaLike) )";
-                       
-                   }
-                        
-                  $condition.=" ) and id_libreta in (Select id_libreta from libreta where id_usuario=" . Yii::app()->user->id_usuario.")";
-                    
-                 
+                $condition=  Nota::model()->ConditionQuery($_GET['buscar']);
+               
                  $dataProvider = new CActiveDataProvider('Nota', array(
                     'criteria' => array(
                         'condition' => $condition,

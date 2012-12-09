@@ -92,7 +92,7 @@ class Nota extends CActiveRecord {
   */
     public function beforeSave() {
 
-        
+        Yii::log($this->hash_etiquetas."holaaaaaaaaaaa",'error');
         if($this->hash_etiquetas){
             
             $etiquetas= explode('#',  $this->hash_etiquetas );
@@ -120,6 +120,59 @@ class Nota extends CActiveRecord {
             }
         }
         return parent::beforeSave();
+    }
+    
+    public function ConditionQuery($buscar,$byUser=true){
+        
+        
+                 $keys=  explode(' ', $buscar);
+                 $contenidoLike='';
+                 $nombreEtiquetaLike='';
+                 $first=true;
+                 foreach ($keys as $key){
+                    $isTag=  strpos( $key , '#') !== false;
+                     
+                    $key= str_replace('#', '', $key);
+                    if(!$first){
+                        if(!$isTag){
+                            if($contenidoLike)
+                                $contenidoLike.=' AND ';
+                        }else{
+                            if($nombreEtiquetaLike)
+                               $nombreEtiquetaLike.=' OR ';
+                        }
+                    }
+                    
+                        if(!$isTag)
+                           $contenidoLike.="contenido like '%".$key."%'";
+                        else
+                            $nombreEtiquetaLike.="nombre like '%".$key."%'";
+                    
+                    
+                    
+                    
+                    $first=false;
+                 }
+                 
+                 $condition="( ";
+                 
+                 if($contenidoLike)
+                    $condition.=" ( $contenidoLike )";
+                 
+                 if($nombreEtiquetaLike){
+                     if($contenidoLike)
+                         $condition.=' AND ';
+                        $condition.=" id_nota in (select id_nota from etiqueta_nota where id_etiqueta in ".
+                         "(select id_etiqueta from etiqueta where $nombreEtiquetaLike) )";
+                       
+                   }
+                        
+                  $condition.=" ) ";
+                      
+                  if($byUser)
+                     $condition .=" and id_libreta in (Select id_libreta from libreta where id_usuario=" . Yii::app()->user->id_usuario.")";
+                    
+                 return $condition;
     }
 
     /**

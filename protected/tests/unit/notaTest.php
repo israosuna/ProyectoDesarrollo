@@ -17,7 +17,8 @@ class NotaTest extends CDbTestCase
             Yii::log(print_r($nota->getAttributes(),TRUE),'error');
 
             $this->assertTrue($nota->save(),'No se pudo guardar la nota');
-                                 
+            $nota->hash_etiquetas=$pre['pruebaCrear']['hash_etiquetas'];
+            $nota->save();
 	}
     public function testAdjuntar(){
       
@@ -57,5 +58,24 @@ class NotaTest extends CDbTestCase
 
     }
 
+    public function testBuscar(){
+        $this->testCrear();
+                    
+                    $pre = $this->getFixtureData('notas');
+                    $condicion=Nota::model()->ConditionQuery($pre['pruebaBuscar']['query'],false);
+                    $notas= Nota::model()->find($condicion);
+                    Yii::log($condicion.' este es el query','error');
+                    if(count($notas)<=0){
+                        
+                    
+                    Yii::log('Nota no encontrado ', CLogger::LEVEL_ERROR); 
+                    Yii::log(count($notas).' Error de contador','error');
+                    
+                    }
+                    $this->assertTrue(count($notas)>0,'No hay notas relacionadas con la busqueda');
+                     
+                            
+
+    }
         
 }
