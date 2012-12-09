@@ -9,7 +9,7 @@ return CMap::mergeArray(
 			),
 			//uncomment the following to provide test database connection
 			'db'=>array(
-                        'connectionString' => 'mysql:host=127.0.0.1;dbname=ProyectoDesarrollo',
+                        'connectionString' => 'mysql:host=127.0.0.1;dbname=ProyectoDesarrolloPruebasUnitarias',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',

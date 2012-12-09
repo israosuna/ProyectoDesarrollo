@@ -1001,3 +1001,513 @@ in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
 in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (29)
 in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
 in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:26:03 [warning] [application] Failed to set unsafe attribute "id_nota" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (14)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:26:03 [error] [application] Array
+(
+    [pruebaCrear] => Array
+        (
+            [id_nota] => 1
+            [id_libreta] => 1
+            [titulo] => Prueba Unitaria
+            [contenido] => Contenido de la prueba unitari
+        )
+
+    [pruebaAdjuntar] => Array
+        (
+            [id_nota] => 2
+            [id_libreta] => 1
+            [titulo] => Prueba Unitaria
+            [contenido] => adjuntoscontent
+            [rutaBase] => /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/fixtures/
+            [ruta_archivo1] => screenshot.jpg
+            [ruta_archivo2] => screen.jpg
+            [ruta_archivo3] => iSync.png
+        )
+
+)
+
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (15)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:26:03 [error] [application] Array
+(
+    [id_libreta] => 1
+    [titulo] => Prueba Unitaria
+    [contenido] => Contenido de la prueba unitari
+    [id_nota] => 
+    [fecha] => 
+)
+
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (17)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:26:03 [warning] [application] Failed to set unsafe attribute "id_nota" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (26)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:26:03 [warning] [application] Failed to set unsafe attribute "rutaBase" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (26)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:26:03 [warning] [application] Failed to set unsafe attribute "ruta_archivo1" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (26)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:26:03 [warning] [application] Failed to set unsafe attribute "ruta_archivo2" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (26)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:26:03 [warning] [application] Failed to set unsafe attribute "ruta_archivo3" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (26)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:26:03 [error] [application] Array
+(
+    [pruebaCrear] => Array
+        (
+            [id_nota] => 1
+            [id_libreta] => 1
+            [titulo] => Prueba Unitaria
+            [contenido] => Contenido de la prueba unitari
+        )
+
+    [pruebaAdjuntar] => Array
+        (
+            [id_nota] => 2
+            [id_libreta] => 1
+            [titulo] => Prueba Unitaria
+            [contenido] => adjuntoscontent
+            [rutaBase] => /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/fixtures/
+            [ruta_archivo1] => screenshot.jpg
+            [ruta_archivo2] => screen.jpg
+            [ruta_archivo3] => iSync.png
+        )
+
+)
+
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (27)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:26:03 [error] [application] Array
+(
+    [id_libreta] => 1
+    [titulo] => Prueba Unitaria
+    [contenido] => adjuntoscontent
+    [id_nota] => 
+    [fecha] => 
+)
+
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (29)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:30:39 [warning] [application] Failed to set unsafe attribute "id_nota" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (14)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:30:39 [error] [application] Array
+(
+    [pruebaCrear] => Array
+        (
+            [id_nota] => 1
+            [id_libreta] => 1
+            [titulo] => Prueba Unitaria
+            [contenido] => Contenido de la prueba unitari
+        )
+
+    [pruebaAdjuntar] => Array
+        (
+            [id_nota] => 2
+            [id_libreta] => 1
+            [titulo] => Prueba Unitaria
+            [contenido] => adjuntoscontent
+            [rutaBase] => /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/fixtures/
+            [ruta_archivo1] => screenshot.jpg
+            [ruta_archivo2] => screen.jpg
+            [ruta_archivo3] => iSync.png
+        )
+
+)
+
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (15)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:30:39 [error] [application] Array
+(
+    [id_libreta] => 1
+    [titulo] => Prueba Unitaria
+    [contenido] => Contenido de la prueba unitari
+    [id_nota] => 
+    [fecha] => 
+)
+
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (17)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:30:39 [warning] [application] Failed to set unsafe attribute "id_nota" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (26)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:30:39 [warning] [application] Failed to set unsafe attribute "rutaBase" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (26)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:30:39 [warning] [application] Failed to set unsafe attribute "ruta_archivo1" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (26)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:30:39 [warning] [application] Failed to set unsafe attribute "ruta_archivo2" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (26)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:30:39 [warning] [application] Failed to set unsafe attribute "ruta_archivo3" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (26)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:30:39 [error] [application] Array
+(
+    [pruebaCrear] => Array
+        (
+            [id_nota] => 1
+            [id_libreta] => 1
+            [titulo] => Prueba Unitaria
+            [contenido] => Contenido de la prueba unitari
+        )
+
+    [pruebaAdjuntar] => Array
+        (
+            [id_nota] => 2
+            [id_libreta] => 1
+            [titulo] => Prueba Unitaria
+            [contenido] => adjuntoscontent
+            [rutaBase] => /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/fixtures/
+            [ruta_archivo1] => screenshot.jpg
+            [ruta_archivo2] => screen.jpg
+            [ruta_archivo3] => iSync.png
+        )
+
+)
+
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (27)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:30:39 [error] [application] Array
+(
+    [id_libreta] => 1
+    [titulo] => Prueba Unitaria
+    [contenido] => adjuntoscontent
+    [id_nota] => 
+    [fecha] => 
+)
+
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (29)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:31:41 [warning] [application] Failed to set unsafe attribute "id_nota" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (14)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:31:41 [error] [application] Array
+(
+    [pruebaCrear] => Array
+        (
+            [id_nota] => 1
+            [id_libreta] => 1
+            [titulo] => Prueba Unitaria
+            [contenido] => Contenido de la prueba unitari
+        )
+
+    [pruebaAdjuntar] => Array
+        (
+            [id_nota] => 2
+            [id_libreta] => 1
+            [titulo] => Prueba Unitaria
+            [contenido] => adjuntoscontent
+            [rutaBase] => /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/fixtures/
+            [ruta_archivo1] => screenshot.jpg
+            [ruta_archivo2] => screen.jpg
+            [ruta_archivo3] => iSync.png
+        )
+
+)
+
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (15)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:31:41 [error] [application] Array
+(
+    [id_libreta] => 1
+    [titulo] => Prueba Unitaria
+    [contenido] => Contenido de la prueba unitari
+    [id_nota] => 
+    [fecha] => 
+)
+
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (17)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:31:41 [warning] [application] Failed to set unsafe attribute "id_nota" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (26)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:31:41 [warning] [application] Failed to set unsafe attribute "rutaBase" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (26)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:31:41 [warning] [application] Failed to set unsafe attribute "ruta_archivo1" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (26)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:31:41 [warning] [application] Failed to set unsafe attribute "ruta_archivo2" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (26)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:31:41 [warning] [application] Failed to set unsafe attribute "ruta_archivo3" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (26)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:31:41 [error] [application] Array
+(
+    [pruebaCrear] => Array
+        (
+            [id_nota] => 1
+            [id_libreta] => 1
+            [titulo] => Prueba Unitaria
+            [contenido] => Contenido de la prueba unitari
+        )
+
+    [pruebaAdjuntar] => Array
+        (
+            [id_nota] => 2
+            [id_libreta] => 1
+            [titulo] => Prueba Unitaria
+            [contenido] => adjuntoscontent
+            [rutaBase] => /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/fixtures/
+            [ruta_archivo1] => screenshot.jpg
+            [ruta_archivo2] => screen.jpg
+            [ruta_archivo3] => iSync.png
+        )
+
+)
+
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (27)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:31:41 [error] [application] Array
+(
+    [id_libreta] => 1
+    [titulo] => Prueba Unitaria
+    [contenido] => adjuntoscontent
+    [id_nota] => 
+    [fecha] => 
+)
+
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (29)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:46:20 [warning] [application] Failed to set unsafe attribute "id_nota" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (14)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:46:20 [error] [application] Array
+(
+    [pruebaCrear] => Array
+        (
+            [id_nota] => 1
+            [id_libreta] => 1
+            [titulo] => Prueba Unitaria
+            [contenido] => Contenido de la prueba unitari
+        )
+
+    [pruebaAdjuntar] => Array
+        (
+            [id_nota] => 2
+            [id_libreta] => 1
+            [titulo] => Prueba Unitaria
+            [contenido] => adjuntoscontent
+            [rutaBase] => /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/fixtures/
+            [ruta_archivo1] => screenshot.jpg
+            [ruta_archivo2] => screen.jpg
+            [ruta_archivo3] => iSync.png
+        )
+
+)
+
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (15)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:46:20 [error] [application] Array
+(
+    [id_libreta] => 1
+    [titulo] => Prueba Unitaria
+    [contenido] => Contenido de la prueba unitari
+    [id_nota] => 
+    [fecha] => 
+)
+
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (17)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:46:20 [warning] [application] Failed to set unsafe attribute "id_nota" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (26)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:46:20 [warning] [application] Failed to set unsafe attribute "rutaBase" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (26)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:46:20 [warning] [application] Failed to set unsafe attribute "ruta_archivo1" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (26)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:46:20 [warning] [application] Failed to set unsafe attribute "ruta_archivo2" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (26)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:46:20 [warning] [application] Failed to set unsafe attribute "ruta_archivo3" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (26)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:46:20 [error] [application] Array
+(
+    [pruebaCrear] => Array
+        (
+            [id_nota] => 1
+            [id_libreta] => 1
+            [titulo] => Prueba Unitaria
+            [contenido] => Contenido de la prueba unitari
+        )
+
+    [pruebaAdjuntar] => Array
+        (
+            [id_nota] => 2
+            [id_libreta] => 1
+            [titulo] => Prueba Unitaria
+            [contenido] => adjuntoscontent
+            [rutaBase] => /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/fixtures/
+            [ruta_archivo1] => screenshot.jpg
+            [ruta_archivo2] => screen.jpg
+            [ruta_archivo3] => iSync.png
+        )
+
+)
+
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (27)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:46:20 [error] [application] Array
+(
+    [id_libreta] => 1
+    [titulo] => Prueba Unitaria
+    [contenido] => adjuntoscontent
+    [id_nota] => 
+    [fecha] => 
+)
+
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (29)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:50:04 [warning] [application] Failed to set unsafe attribute "id_nota" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (14)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:50:04 [error] [application] Array
+(
+    [pruebaCrear] => Array
+        (
+            [id_nota] => 1
+            [id_libreta] => 1
+            [titulo] => Prueba Unitaria
+            [contenido] => Contenido de la prueba unitari
+        )
+
+    [pruebaAdjuntar] => Array
+        (
+            [id_nota] => 2
+            [id_libreta] => 1
+            [titulo] => Prueba Unitaria
+            [contenido] => adjuntoscontent
+            [rutaBase] => /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/fixtures/
+            [ruta_archivo1] => screenshot.jpg
+            [ruta_archivo2] => screen.jpg
+            [ruta_archivo3] => iSync.png
+        )
+
+)
+
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (15)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:50:04 [error] [application] Array
+(
+    [id_libreta] => 1
+    [titulo] => Prueba Unitaria
+    [contenido] => Contenido de la prueba unitari
+    [id_nota] => 
+    [fecha] => 
+)
+
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (17)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:50:04 [warning] [application] Failed to set unsafe attribute "id_nota" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (26)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:50:04 [warning] [application] Failed to set unsafe attribute "rutaBase" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (26)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:50:04 [warning] [application] Failed to set unsafe attribute "ruta_archivo1" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (26)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:50:04 [warning] [application] Failed to set unsafe attribute "ruta_archivo2" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (26)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:50:04 [warning] [application] Failed to set unsafe attribute "ruta_archivo3" of "Nota".
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (26)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:50:04 [error] [application] Array
+(
+    [pruebaCrear] => Array
+        (
+            [id_nota] => 1
+            [id_libreta] => 1
+            [titulo] => Prueba Unitaria
+            [contenido] => Contenido de la prueba unitari
+        )
+
+    [pruebaAdjuntar] => Array
+        (
+            [id_nota] => 2
+            [id_libreta] => 1
+            [titulo] => Prueba Unitaria
+            [contenido] => adjuntoscontent
+            [rutaBase] => /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/fixtures/
+            [ruta_archivo1] => screenshot.jpg
+            [ruta_archivo2] => screen.jpg
+            [ruta_archivo3] => iSync.png
+        )
+
+)
+
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (27)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
+2012/12/08 19:50:04 [error] [application] Array
+(
+    [id_libreta] => 1
+    [titulo] => Prueba Unitaria
+    [contenido] => adjuntoscontent
+    [id_nota] => 
+    [fecha] => 
+)
+
+in /Applications/XAMPP/xamppfiles/htdocs/ProyectoDesarrollo/protected/tests/unit/notaTest.php (29)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (969)
+in /usr/lib/php/pear/PHPUnit/Framework/TestCase.php (824)
