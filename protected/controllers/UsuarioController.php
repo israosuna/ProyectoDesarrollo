@@ -31,7 +31,7 @@ class UsuarioController extends Controller {
                 'users' => array('*'),
             ),
             array('allow', // permite a usuarios autenticados el uso de 'create', 'update' y 'usuario'
-                'actions' => array('create', 'update', 'usuario', 'exportXML','importXML'),
+                'actions' => array('create', 'update', 'usuario', 'exportXML', 'importXML'),
                 'users' => array('@'),
             ),
             array('allow', // permite al usuario acciones de 'admin' y 'delete'
@@ -189,22 +189,21 @@ class UsuarioController extends Controller {
     public function actionExportXML($id) {
         $model = Usuario::model()->findByPk($id);
         header('Content-type: application/octet-stream');
-        header("Content-Disposition: attachment; filename=" .$model->usuario.'.xml');
+        header("Content-Disposition: attachment; filename=" . $model->usuario . '.xml');
         echo $model->exportXML()->saveXML();
     }
-    public function actionImportXML(){
-        if($_FILES['xmlfile']){
-            $content=  file_get_contents($_FILES['xmlfile']['tmp_name']);
-            if(Usuario::model()->importXML($content)){
-                $this->render("importXML",array('message'=>'USUARIO AGREGADO'));
-            }else{
-                $this->render("importXML",array('message'=>'USUARIO NO SE PUDO AGREGAR'));  
+
+    public function actionImportXML() {
+        if ($_FILES['xmlfile']) {
+            $content = file_get_contents($_FILES['xmlfile']['tmp_name']);
+            if (Usuario::model()->importXML($content)) {
+                $this->render("importXML", array('message' => 'USUARIO AGREGADO'));
+            } else {
+                $this->render("importXML", array('message' => 'USUARIO NO SE PUDO AGREGAR'));
             }
-            
-        }else{
+        } else {
             $this->render("importXML");
         }
-        
     }
 
 }

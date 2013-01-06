@@ -69,14 +69,17 @@ class Usuario extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
+            
             array('usuario', 'unique'),
             array('email', 'email'),
+            array('token', 'safe'),
             array('nombre, apellido, usuario, clave, clave2, usuario_dropbox, password_dropbox, email', 'length', 'max' => 30),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('id_usuario, nombre, apellido, usuario, clave, usuario_dropbox, password_dropbox, email', 'safe', 'on' => 'search'),
+            array('id_usuario, nombre, apellido, usuario, clave, usuario_dropbox, password_dropbox, email, token', 'safe', 'on' => 'search'),
             array('verifyCode', 'captcha', 'allowEmpty' => TRUE),
             array('clave2', 'compare', 'compareAttribute' => 'clave'),
+            
         );
     }
 
@@ -141,54 +144,73 @@ class Usuario extends CActiveRecord {
 
         foreach ($this->libretas as $libreta) {
             $arrayLibreta = $libreta->getAttributes();
-            $arrayLibretas = array_merge($arrayLibretas, array( $arrayLibreta ));
+            $arrayLibretas = array_merge($arrayLibretas, array($arrayLibreta));
             $arrayNotas = array();
             foreach ($libreta->notas as $notas) {
 
-                $arrayNotas = array_merge($arrayNotas, array( $notas->getAttributes() ));
+                $arrayNotas = array_merge($arrayNotas, array($notas->getAttributes()));
             }
 
             $arrayLibreta['notas'] = $arrayNotas;
-            $arrayLibretas = array_merge($arrayLibretas, array( $arrayLibreta ));
+            $arrayLibretas = array_merge($arrayLibretas, array($arrayLibreta));
         }
         $array['libretas'] = $arrayLibretas;
         return Array2XML::createXML('usuario', $array);
     }
 
-    public function importXML($xml)
-    {
+    public function importXML($xml) {
         $export = Yii::getPathOfAlias('ext.array2XML');
         include_once ( $export . DIRECTORY_SEPARATOR . 'Array2XML.php');
-        
-        $xml= xml2array($xml);
-        $array= $xml['usuario'];
-        $this->setAttributes($array);
-     
-        if($this->save()){
+
+        $xml = xml2array($xml);
+        $array = $xml['usuario'];
+        $usuario= new Usuario();
+        if (isset($array['id_usuario'])) {
+            $usuario = Usuario::model()->findByPk($array['id_usuario']);
+            if(!$usuario)
+               $usuario= new Usuario();
+        }
+        $usuario->setAttributes($array);
+        $usuario->clave2=$usuario->clave;
+        if ($usuario->save()) {
             $arrayLibretas = $array['libretas'];
-            foreach($arrayLibretas as $arrayLibreta){
-                $libreta= new Libreta();
-                $libreta->setAttributes($arrayLibreta);   
-                if($libreta->save()){
-                    $arrayNotas=$arrayLibreta['notas'];
-                    foreach($arrayNotas as $arrayNota){
-                        $nota= new Nota();
+            if(is_array($arrayLibretas))
+            foreach ($arrayLibretas as $arrayLibreta) {
+                $libreta = new Libreta();
+                if (isset($arrayLibreta['id_libreta'])) {
+                    $libreta = Libreta::model()->findByPk($arrayLibreta['id_libreta']);
+                    if(!$libreta)
+                        $libreta= new Libreta();
+                }
+                $libreta->setAttributes($arrayLibreta);
+                $libreta->id_usuario=$usuario->id_usuario;
+                if ($libreta->save()) {
+                    $arrayNotas = $arrayLibreta['notas'];
+                    if(is_array($arrayNotas))
+                    foreach ($arrayNotas as $arrayNota) {
+                        $nota = new Nota();
+                        if (isset($arrayNota['id_nota'])) {
+                            $nota = Nota::model()->findByPk($arrayNota['id_nota']);
+                            if(!$nota)
+                                $nota= new Nota();
+                        }
                         $nota->setAttributes($arrayNota);
-                        if(!$nota->save()){                            
+                        $nota->id_libreta=$libreta->id_libreta;
+                        if (!$nota->save()) {
                             Yii::log('La libreta no se puse guardar', 'error');
                             return false;
                         }
                     }
-                }else{
+                } else {
                     Yii::log('La libreta no se puse guardar', 'error');
                     return false;
                 }
             }
-        }else{
+        } else {
             Yii::log('El usuario tiene informacion inconsistente', 'error');
             return false;
         }
         return true;
-        
     }
+
 }
