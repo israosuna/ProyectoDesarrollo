@@ -9,7 +9,7 @@ $this->menu=array(
 	array('label'=>'Listar Libretas', 'url'=>array('index')),
 	array('label'=>'Crear Libreta', 'url'=>array('create')),
 	array('label'=>'View Libreta', 'url'=>array('view', 'id'=>$model->id_libreta)),
-	array('label'=>'Modificar Libreta', 'url'=>array('admin')),
+	//array('label'=>'Modificar Libreta', 'url'=>array('admin')),
 );
 ?>
 

@@ -92,7 +92,7 @@ class Nota extends CActiveRecord {
   */
     public function beforeSave() {
 
-        Yii::log($this->hash_etiquetas."holaaaaaaaaaaa",'error');
+        Yii::log($this->hash_etiquetas."etiquetas a guardar",'error');
         if($this->hash_etiquetas){
             
             $etiquetas= explode('#',  $this->hash_etiquetas );

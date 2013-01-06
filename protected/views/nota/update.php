@@ -8,8 +8,8 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'Listar Nota', 'url'=>array('index')),
 	array('label'=>'Crear Nota', 'url'=>array('create')),
-	array('label'=>'View Nota', 'url'=>array('view', 'id'=>$model->id_nota)),
-	array('label'=>'Modificar Nota', 'url'=>array('admin')),
+	array('label'=>'Ver Nota', 'url'=>array('view', 'id'=>$model->id_nota)),
+	//array('label'=>'Modificar Nota', 'url'=>array('admin')),
 );
 ?>
 

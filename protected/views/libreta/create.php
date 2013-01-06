@@ -6,7 +6,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Listar Libreta', 'url'=>array('index')),
-	array('label'=>'Gestionar Libreta', 'url'=>array('admin')),
+	//array('label'=>'Gestionar Libreta', 'url'=>array('admin')),
 );
 ?>
 

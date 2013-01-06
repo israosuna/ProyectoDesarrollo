@@ -5,7 +5,8 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Crear Libreta', 'url'=>array('create')),
-	array('label'=>'Modificar Libreta', 'url'=>array('admin')),
+  //  array('label'=>'Mofificar Nota', 'url'=>array('update', 'id'=>$model->id_libreta)),
+	//array('label'=>'Modificar Libreta', 'url'=>array('update')),
 );
 ?>
 
