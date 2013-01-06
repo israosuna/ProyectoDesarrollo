@@ -185,6 +185,8 @@ class Usuario extends CActiveRecord {
                 $libreta->setAttributes($arrayLibreta);
                 $libreta->id_usuario=$usuario->id_usuario;
                 if ($libreta->save()) {
+                    $arrayNotas=array();
+                    if(isset($arrayLibreta['notas']))
                     $arrayNotas = $arrayLibreta['notas'];
                     if(is_array($arrayNotas))
                     foreach ($arrayNotas as $arrayNota) {
@@ -207,8 +209,11 @@ class Usuario extends CActiveRecord {
                 }
             }
         } else {
+            //echo CHtml::errorSummary($usuario);
             Yii::log('El usuario tiene informacion inconsistente', 'error');
+            
             return false;
+            
         }
         return true;
     }
