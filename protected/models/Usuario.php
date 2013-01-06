@@ -149,4 +149,17 @@ class Usuario extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+        public function exportXML()
+        {
+                $export = Yii::getPathOfAlias('ext.array2XML');
+                include_once ( $export . DIRECTORY_SEPARATOR . 'Array2XML.php');
+                $array= $this->getAttributes();
+                $arrayLibretas= array();
+                foreach ($this->libretas as $libreta){
+                    
+                    
+                }
+       
+            
+        }
 }

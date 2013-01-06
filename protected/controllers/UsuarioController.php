@@ -34,7 +34,7 @@ class UsuarioController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // permite a usuarios autenticados el uso de 'create', 'update' y 'usuario'
-				'actions'=>array('create','update','usuario'),
+				'actions'=>array('create','update','usuario','exportXML'),
 				'users'=>array('@'),
 			),
 			array('allow', // permite al usuario acciones de 'admin' y 'delete'
@@ -208,4 +208,12 @@ class UsuarioController extends Controller
 			Yii::app()->end();
 		}
 	}
+        
+        public function actionExportXML($id)
+        {
+            		$model=Usuario::model()->findByPk($id);
+                        
+
+            
+        }
 }
