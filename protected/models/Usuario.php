@@ -155,4 +155,40 @@ class Usuario extends CActiveRecord {
         return Array2XML::createXML('usuario', $array);
     }
 
+    public function importXML($xml)
+    {
+        $export = Yii::getPathOfAlias('ext.array2XML');
+        include_once ( $export . DIRECTORY_SEPARATOR . 'Array2XML.php');
+        
+        $xml= xml2array($xml);
+        $array= $xml['usuario'];
+        $this->setAttributes($array);
+     
+        if($this->save()){
+            $arrayLibretas = $array['libretas'];
+            foreach($arrayLibretas as $arrayLibreta){
+                $libreta= new Libreta();
+                $libreta->setAttributes($arrayLibreta);   
+                if($libreta->save()){
+                    $arrayNotas=$arrayLibreta['notas'];
+                    foreach($arrayNotas as $arrayNota){
+                        $nota= new Nota();
+                        $nota->setAttributes($arrayNota);
+                        if(!$nota->save()){                            
+                            Yii::log('La libreta no se puse guardar', 'error');
+                            return false;
+                        }
+                    }
+                }else{
+                    Yii::log('La libreta no se puse guardar', 'error');
+                    return false;
+                }
+            }
+        }else{
+            Yii::log('El usuario tiene informacion inconsistente', 'error');
+            return false;
+        }
+        return true;
+        
+    }
 }

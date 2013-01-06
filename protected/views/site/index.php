@@ -69,5 +69,18 @@ echo CHtml::endForm();
             </span>
             </center>
         </td>
+        
+        <td>
+            <center>
+                <a class="botones"  href="<?php echo Yii::app()->baseUrl?>/usuario/importXML">
+                <img  src="<?php echo Yii::app()->baseUrl?>/images/note.png"/>
+                
+            </a>
+            
+             <span>
+                Importar Usuario
+            </span>
+            </center>
+        </td>
     </tr>    
 </table>

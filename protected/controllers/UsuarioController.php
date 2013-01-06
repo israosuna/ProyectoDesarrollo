@@ -31,7 +31,7 @@ class UsuarioController extends Controller {
                 'users' => array('*'),
             ),
             array('allow', // permite a usuarios autenticados el uso de 'create', 'update' y 'usuario'
-                'actions' => array('create', 'update', 'usuario', 'exportXML'),
+                'actions' => array('create', 'update', 'usuario', 'exportXML','importXML'),
                 'users' => array('@'),
             ),
             array('allow', // permite al usuario acciones de 'admin' y 'delete'
@@ -191,6 +191,20 @@ class UsuarioController extends Controller {
         header('Content-type: application/octet-stream');
         header("Content-Disposition: attachment; filename=" .$model->usuario.'.xml');
         echo $model->exportXML()->saveXML();
+    }
+    public function actionImportXML(){
+        if($_FILES['xmlfile']){
+            $content=  file_get_contents($_FILES['xmlfile']['tmp_name']);
+            if(Usuario::model()->importXML($content)){
+                $this->render("importXML",array('message'=>'USUARIO AGREGADO'));
+            }else{
+                $this->render("importXML",array('message'=>'USUARIO NO SE PUDO AGREGAR'));  
+            }
+            
+        }else{
+            $this->render("importXML");
+        }
+        
     }
 
 }
