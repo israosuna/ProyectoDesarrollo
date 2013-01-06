@@ -17,149 +17,142 @@
  * The followings are the available model relations:
  * @property Libreta[] $libretas
  */
-class Usuario extends CActiveRecord
-{
-	public $verifyCode;
-	public $clave2;
-	
-   
-        /**
-         *Metodo que permite obtener la lista de usuario, que trae el id del usuario
-         * como el KeyValue  
-         */
-        
-        public function getArray($find=''){
-            
-            $users;
-            
-            if ($find) {
-            
-                $users=self::model()->findAll($find);
-                
-            }
-            else{
-                
-                $users=  self::model()->findAll();
-            }
-            $ret= array();
-            foreach ($users as $user){
-                
-                $ret[$user->id_usuario]=$user->nombre.' '.$user->apellido;
-                
-                
-            }
-        
-            return $ret;
+class Usuario extends CActiveRecord {
+
+    public $verifyCode;
+    public $clave2;
+
+    /**
+     * Metodo que permite obtener la lista de usuario, que trae el id del usuario
+     * como el KeyValue  
+     */
+    public function getArray($find = '') {
+
+        $users;
+
+        if ($find) {
+
+            $users = self::model()->findAll($find);
+        } else {
+
+            $users = self::model()->findAll();
+        }
+        $ret = array();
+        foreach ($users as $user) {
+
+            $ret[$user->id_usuario] = $user->nombre . ' ' . $user->apellido;
         }
 
+        return $ret;
+    }
 
-        /**
-	 * Returns the static model of the specified AR class.
-	 * @param string $className active record class name.
-	 * @return Usuario the static model class
-	 */
-	public static function model($className=__CLASS__)
-	{
-		return parent::model($className);
-	}
+    /**
+     * Returns the static model of the specified AR class.
+     * @param string $className active record class name.
+     * @return Usuario the static model class
+     */
+    public static function model($className = __CLASS__) {
+        return parent::model($className);
+    }
 
-	/**
-	 * @return string the associated database table name
-	 */
-	public function tableName()
-	{
-		return 'usuario';
-	}
+    /**
+     * @return string the associated database table name
+     */
+    public function tableName() {
+        return 'usuario';
+    }
 
-	/**
-	 * @return array validation rules for model attributes.
-	 */
-	public function rules()
-	{
-		// NOTE: you should only define rules for those attributes that
-		// will receive user inputs.
-		return array(
-                        array('usuario','unique'),
-                        array('email','email'),
-			array('nombre, apellido, usuario, clave, clave2, usuario_dropbox, password_dropbox, email', 'length', 'max'=>30),
-			// The following rule is used by search().
-			// Please remove those attributes that should not be searched.
-			array('id_usuario, nombre, apellido, usuario, clave, usuario_dropbox, password_dropbox, email', 'safe', 'on'=>'search'),
-		        array('verifyCode', 'captcha', 'allowEmpty'=>TRUE),
-                        array('clave2', 'compare', 'compareAttribute'=>'clave'),
-                        
+    /**
+     * @return array validation rules for model attributes.
+     */
+    public function rules() {
+        // NOTE: you should only define rules for those attributes that
+        // will receive user inputs.
+        return array(
+            array('usuario', 'unique'),
+            array('email', 'email'),
+            array('nombre, apellido, usuario, clave, clave2, usuario_dropbox, password_dropbox, email', 'length', 'max' => 30),
+            // The following rule is used by search().
+            // Please remove those attributes that should not be searched.
+            array('id_usuario, nombre, apellido, usuario, clave, usuario_dropbox, password_dropbox, email', 'safe', 'on' => 'search'),
+            array('verifyCode', 'captcha', 'allowEmpty' => TRUE),
+            array('clave2', 'compare', 'compareAttribute' => 'clave'),
+        );
+    }
 
+    /**
+     * @return array relational rules.
+     */
+    public function relations() {
+        // NOTE: you may need to adjust the relation name and the related
+        // class name for the relations automatically generated below.
+        return array(
+            'libretas' => array(self::HAS_MANY, 'Libreta', 'id_usuario'),
+        );
+    }
 
-                    );
-	}
+    /**
+     * @return array customized attribute labels (name=>label)
+     */
+    public function attributeLabels() {
+        return array(
+            'id_usuario' => 'Id Usuario',
+            'nombre' => 'Nombre',
+            'apellido' => 'Apellido',
+            'usuario' => 'Usuario',
+            'clave' => 'Clave',
+            'clave2' => 'Repita Su Password',
+            'usuario_dropbox' => 'Usuario Dropbox',
+            'password_dropbox' => 'Password Dropbox',
+            'email' => 'Email',
+            'verifyCode' => 'Verification Code',
+        );
+    }
 
-	/**
-	 * @return array relational rules.
-	 */
-	public function relations()
-	{
-		// NOTE: you may need to adjust the relation name and the related
-		// class name for the relations automatically generated below.
-		return array(
-			'libretas' => array(self::HAS_MANY, 'Libreta', 'id_usuario'),
-		);
-	}
+    /**
+     * Retrieves a list of models based on the current search/filter conditions.
+     * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+     */
+    public function search() {
+        // Warning: Please modify the following code to remove attributes that
+        // should not be searched.
 
-	/**
-	 * @return array customized attribute labels (name=>label)
-	 */
-	public function attributeLabels()
-	{
-		return array(
-			'id_usuario' => 'Id Usuario',
-			'nombre' => 'Nombre',
-			'apellido' => 'Apellido',
-			'usuario' => 'Usuario',
-			'clave' => 'Clave',
-			'clave2' => 'Repita Su Password',
-                        'usuario_dropbox' => 'Usuario Dropbox',
-			'password_dropbox' => 'Password Dropbox',
-			'email' => 'Email',
-                        'verifyCode'=>'Verification Code',
+        $criteria = new CDbCriteria;
 
-		);
-	}
+        $criteria->compare('id_usuario', $this->id_usuario);
+        $criteria->compare('nombre', $this->nombre, true);
+        $criteria->compare('apellido', $this->apellido, true);
+        $criteria->compare('usuario', $this->usuario, true);
+        $criteria->compare('clave', $this->clave, true);
+        $criteria->compare('usuario_dropbox', $this->usuario_dropbox, true);
+        $criteria->compare('password_dropbox', $this->password_dropbox, true);
+        $criteria->compare('email', $this->email, true);
 
-        /**
-	 * Retrieves a list of models based on the current search/filter conditions.
-	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
-	 */
-	public function search()
-	{
-		// Warning: Please modify the following code to remove attributes that
-		// should not be searched.
+        return new CActiveDataProvider($this, array(
+                    'criteria' => $criteria,
+                ));
+    }
 
-		$criteria=new CDbCriteria;
+    public function exportXML() {
+        $export = Yii::getPathOfAlias('ext.array2XML');
+        include_once ( $export . DIRECTORY_SEPARATOR . 'Array2XML.php');
+        $array = $this->getAttributes();
+        $arrayLibretas = array();
 
-		$criteria->compare('id_usuario',$this->id_usuario);
-		$criteria->compare('nombre',$this->nombre,true);
-		$criteria->compare('apellido',$this->apellido,true);
-		$criteria->compare('usuario',$this->usuario,true);
-		$criteria->compare('clave',$this->clave,true);
-		$criteria->compare('usuario_dropbox',$this->usuario_dropbox,true);
-		$criteria->compare('password_dropbox',$this->password_dropbox,true);
-		$criteria->compare('email',$this->email,true);
+        foreach ($this->libretas as $libreta) {
+            $arrayLibreta = $libreta->getAttributes();
+            $arrayLibretas = array_merge($arrayLibretas, array( $arrayLibreta ));
+            $arrayNotas = array();
+            foreach ($libreta->notas as $notas) {
 
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		));
-	}
-        public function exportXML()
-        {
-                $export = Yii::getPathOfAlias('ext.array2XML');
-                include_once ( $export . DIRECTORY_SEPARATOR . 'Array2XML.php');
-                $array= $this->getAttributes();
-                $arrayLibretas= array();
-                foreach ($this->libretas as $libreta){
-                    
-                    
-                }
-       
-            
+                $arrayNotas = array_merge($arrayNotas, array( $notas->getAttributes() ));
+            }
+
+            $arrayLibreta['notas'] = $arrayNotas;
+            $arrayLibretas = array_merge($arrayLibretas, array( $arrayLibreta ));
         }
+        $array['libretas'] = $arrayLibretas;
+        return Array2XML::createXML('usuario', $array);
+    }
+
 }

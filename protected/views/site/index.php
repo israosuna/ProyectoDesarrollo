@@ -31,6 +31,18 @@ echo CHtml::endForm();
                 Ver Notas
             </span>
             </center>
+        </td>      
+        <td>
+            <center>
+                <a class="botones"  href="<?php echo Yii::app()->baseUrl?>/usuario/exportXML/<?php echo Yii::app()->user->id_usuario; ?>">
+                <img  src="<?php echo Yii::app()->baseUrl?>/images/note.png"/>
+                
+            </a>
+            
+             <span>
+                Exportar Usuario
+            </span>
+            </center>
         </td>
     </tr>
     <tr>
